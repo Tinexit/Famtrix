@@ -70,7 +70,7 @@ export default function ChecklistLandingPage() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group" title="Return to FAMTRIX Homepage">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/famtrix-logo.svg" alt="FAMTRIX Digital Solutions" className="h-9 sm:h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <img src="/assets/famtrix-logo.png" alt="FAMTRIX Techno Solutions" className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           <Link href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-400 hover:text-white transition-colors group">

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAMTRIX | Digital Marketing Software & Tech Solutions in Mysuru</title>
+  <title>FAMTRIX | Digital Marketing & Tech Solutions in Mysuru</title>
   <!-- SEO & Social Graph Meta Tags -->
-  <meta name="description" content="Powered by Innovation. Driven by Technology. FAMTRIX delivers digital marketing software, full-stack web development, AI automation, and cybersecurity in Mysuru." />
-  <meta name="keywords" content="FAMTRIX, tech solutions Mysuru, digital marketing software Mysore, full-stack development, AI automation, cybersecurity Mysore, startup MVP development" />
+  <meta name="description" content="Powered by Innovation. Driven by Technology. FAMTRIX delivers digital marketing, full-stack web development, AI automation, and cybersecurity in Mysuru." />
+  <meta name="keywords" content="FAMTRIX, tech solutions Mysuru, digital marketing Mysore, full-stack development, AI automation, cybersecurity Mysore, startup MVP development" />
   <meta name="author" content="FAMTRIX Digital Solutions" />
-  <meta property="og:title" content="FAMTRIX | Digital Marketing Software & Tech Solutions in Mysuru" />
+  <meta property="og:title" content="FAMTRIX | Digital Marketing & Tech Solutions in Mysuru" />
   <meta property="og:description" content="Powered by Innovation. Driven by Technology. Custom web software, AI workflows, and digital marketing built for startups, local businesses, and students in Mysuru." />
   <meta property="og:image" content="assets/hero-banner.png" />
   <meta property="og:type" content="website" />
@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="FAMTRIX | Digital Solutions for a Smarter Tomorrow" />
   <meta name="twitter:description" content="Powered by Innovation. Driven by Technology. Built in Mysuru for startups, businesses, and students." />
   <meta name="twitter:image" content="assets/hero-banner.png" />
-  <link rel="icon" type="image/svg+xml" href="assets/famtrix-logo.svg" />
+  <link rel="icon" type="image/png" href="assets/famtrix-logo.png" />
 
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -244,6 +244,64 @@
     .cta-hover-lift:active {
       transform: translateY(0) scale(0.98);
     }
+
+    /* CCDC Pop-Up Motion & Attractive Letter Animation */
+    @keyframes ccdcPopWave {
+      0%, 100% {
+        transform: translateY(0px) scale(1);
+        box-shadow: 0 4px 15px -3px rgba(14, 165, 233, 0.2);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      20% {
+        transform: translateY(-10px) scale(1.08);
+        box-shadow: 0 16px 30px -4px rgba(14, 165, 233, 0.5), 0 0 24px 2px rgba(56, 189, 248, 0.45);
+        border-color: rgba(56, 189, 248, 0.6);
+      }
+      40% {
+        transform: translateY(0px) scale(1);
+        box-shadow: 0 4px 15px -3px rgba(14, 165, 233, 0.2);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .ccdc-pop-1 {
+      animation: ccdcPopWave 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite 0s;
+    }
+    .ccdc-pop-2 {
+      animation: ccdcPopWave 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite 1.2s;
+    }
+    .ccdc-pop-3 {
+      animation: ccdcPopWave 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite 2.4s;
+    }
+    .ccdc-pop-4 {
+      animation: ccdcPopWave 4.8s cubic-bezier(0.16, 1, 0.3, 1) infinite 3.6s;
+    }
+
+    .ccdc-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ccdc-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 20px 35px -8px rgba(14, 165, 233, 0.35);
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+
+    /* WhatsApp Floating Bar Motion Style */
+    @keyframes whatsappFloat {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    .whatsapp-motion-bar {
+      animation: whatsappFloat 3.8s ease-in-out infinite;
+    }
+    .whatsapp-motion-bar:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="bg-surface-canvas text-slate-100 font-sans antialiased selection:bg-brand-primary selection:text-white relative overflow-x-hidden min-h-screen">
@@ -256,7 +314,7 @@
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group" aria-label="FAMTRIX Homepage">
-        <img src="assets/famtrix-logo.svg" alt="FAMTRIX Digital Solutions" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
+        <img src="assets/famtrix-logo.png" alt="FAMTRIX Techno Solutions" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -361,13 +419,13 @@
 
             <!-- Wireframe Exact Headline with Magic UI Animated Gradient Text -->
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
-              Digital marketing software and <span class="animated-gradient-text">tech solutions</span> for growing businesses
+              Digital marketing and <span className="animated-gradient-text">tech solutions</span> for growing businesses
             </h1>
 
             <!-- Sub-headline from Wireframe & Brand Pillars -->
             <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl">
               <span class="text-white font-semibold">Powered by Innovation. Driven by Technology.</span><br />
-              Tailored software development, high-converting digital marketing, and automated workflows. Remote or in-person right here in Mysuru.
+              Tailored web development, high-converting digital marketing, and automated workflows. Remote or in-person right here in Mysuru.
             </p>
 
             <!-- Dual CTA Action Buttons with Magic UI Shiny Effect & Hover Lift -->
@@ -387,21 +445,21 @@
 
             <!-- Quick Trust / Value Highlights -->
             <div class="pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
-              <div>
-                <div class="text-2xl font-bold font-mono text-white">50+</div>
-                <div class="text-xs text-slate-400">Happy Clients</div>
+              <div class="p-2 rounded-xl bg-slate-900/40 border border-white/5">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-white">5+</div>
+                <div class="text-xs text-slate-400 font-medium">Happy Clients</div>
               </div>
-              <div>
-                <div class="text-2xl font-bold font-mono text-brand-secondary">100+</div>
-                <div class="text-xs text-slate-400">Projects Delivered</div>
+              <div class="p-2 rounded-xl bg-slate-900/40 border border-white/5">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-brand-secondary">7+</div>
+                <div class="text-xs text-slate-400 font-medium">Projects Delivered</div>
               </div>
-              <div>
-                <div class="text-2xl font-bold font-mono text-brand-primary">100%</div>
-                <div class="text-xs text-slate-400">Secure Solutions</div>
+              <div class="p-2 rounded-xl bg-slate-900/40 border border-white/5">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-brand-primary">100%</div>
+                <div class="text-xs text-slate-400 font-medium">Secured</div>
               </div>
-              <div>
-                <div class="text-2xl font-bold font-mono text-emerald-400">98%</div>
-                <div class="text-xs text-slate-400">Client Satisfaction</div>
+              <div class="p-2 rounded-xl bg-slate-900/40 border border-white/5">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-emerald-400">98%</div>
+                <div class="text-xs text-slate-400 font-medium">Client Satisfaction</div>
               </div>
             </div>
 
@@ -465,22 +523,22 @@
         <!-- 4 Magic Cards with Cursor Spotlight Tracking -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Card 1: Digital Marketing Software -->
+          <!-- Card 1: Digital Marketing -->
           <div class="magic-card p-6 flex flex-col justify-between group motion-reveal delay-100">
             <div class="space-y-4 relative z-10">
               <div class="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                 <img src="assets/digital-marketing-service.png" 
-                     alt="Digital Marketing Software" 
+                     alt="Digital Marketing" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/90 text-slate-950 tracking-wide uppercase">
                   Flagship
                 </span>
               </div>
               <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
-                Digital Marketing Software
+                Digital Marketing
               </h3>
               <p class="text-slate-400 text-sm leading-relaxed">
-                Flagship growth suite. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI.
+                Flagship growth strategies. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI.
               </p>
             </div>
             <div class="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -897,45 +955,104 @@
           </p>
         </div>
 
-        <!-- The FAMTRIX CCDC Framework Feature Banner -->
-        <div class="glass-card rounded-3xl p-6 sm:p-10 mb-16 border border-brand-primary/20 shadow-glow-cyan/10 motion-reveal">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- The FAMTRIX CCDC Framework Feature Banner with Letter Pop-Up Motion -->
+        <div class="glass-card rounded-3xl p-6 sm:p-10 mb-16 border border-brand-primary/20 shadow-glow-cyan/10 motion-reveal relative overflow-hidden">
+          <div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div class="lg:col-span-6 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono bg-emerald-500/10 text-emerald-400">
-                <span>PROVEN FRAMEWORK</span>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>PROVEN 4-STAGE METHODOLOGY</span>
               </div>
-              <h3 class="text-3xl font-extrabold text-white leading-tight">
+              
+              <h3 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
                 From Ideas to Impact — The <span class="text-brand-secondary">CCDC Approach</span>
               </h3>
+              
               <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
                 Our CCDC approach guides every engagement from understanding your business goals to delivering high-performance tech solutions and measurable value.
               </p>
               
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
-                  <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Stage 1: Creating Value</div>
-                  <div class="text-xs text-slate-300">Understand your goals and architect the right digital solutions.</div>
+              <!-- Interactive Animated CCDC Letters Bar -->
+              <div class="flex items-center justify-between sm:justify-start sm:gap-4 p-3 rounded-2xl bg-slate-950/70 border border-white/10 backdrop-blur-md">
+                <div class="flex items-center gap-2">
+                  <div class="ccdc-pop-1 flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-500/25 to-blue-600/30 border border-cyan-400 text-cyan-300 font-extrabold font-mono text-xl shadow-[0_0_15px_rgba(6,182,212,0.4)] cursor-pointer">
+                    C
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">Create</span>
                 </div>
-                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
-                  <div class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Stage 2: Creating Quality</div>
-                  <div class="text-xs text-slate-300">Build reliable, high-performance systems with rigorous attention to detail.</div>
+
+                <div class="h-0.5 w-4 sm:w-6 bg-gradient-to-r from-cyan-500/40 to-blue-500/40"></div>
+
+                <div class="flex items-center gap-2">
+                  <div class="ccdc-pop-2 flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/25 to-indigo-600/30 border border-blue-400 text-blue-300 font-extrabold font-mono text-xl shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer">
+                    C
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">Quality</span>
                 </div>
-                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
-                  <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Stage 3: Delivering Value</div>
-                  <div class="text-xs text-slate-300">Turn concepts into impactful applications that drive real business growth.</div>
+
+                <div class="h-0.5 w-4 sm:w-6 bg-gradient-to-r from-blue-500/40 to-emerald-500/40"></div>
+
+                <div class="flex items-center gap-2">
+                  <div class="ccdc-pop-3 flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500/25 to-teal-600/30 border border-emerald-400 text-emerald-300 font-extrabold font-mono text-xl shadow-[0_0_15px_rgba(16,185,129,0.4)] cursor-pointer">
+                    D
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">Deliver</span>
                 </div>
-                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
-                  <div class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Stage 4: Capturing Highlights</div>
-                  <div class="text-xs text-slate-300">Measure success, track conversion metrics, and scale your brand.</div>
+
+                <div class="h-0.5 w-4 sm:w-6 bg-gradient-to-r from-emerald-500/40 to-purple-500/40"></div>
+
+                <div class="flex items-center gap-2">
+                  <div class="ccdc-pop-4 flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500/25 to-pink-600/30 border border-purple-400 text-purple-300 font-extrabold font-mono text-xl shadow-[0_0_15px_rgba(168,85,247,0.4)] cursor-pointer">
+                    C
+                  </div>
+                  <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">Capture</span>
+                </div>
+              </div>
+              
+              <!-- Detailed 4-Stage Motion Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                <div class="ccdc-card p-4 rounded-xl bg-slate-900/80 border border-cyan-500/20 group cursor-pointer">
+                  <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-md bg-cyan-500/20 text-cyan-300 font-mono font-bold text-xs">C</span>
+                    <div class="text-xs font-bold text-cyan-300 uppercase tracking-wider">Stage 1: Creating Value</div>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed">Understand your business vision, identify opportunities, and architect the right digital solutions.</div>
+                </div>
+
+                <div class="ccdc-card p-4 rounded-xl bg-slate-900/80 border border-blue-500/20 group cursor-pointer">
+                  <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-md bg-blue-500/20 text-blue-300 font-mono font-bold text-xs">C</span>
+                    <div class="text-xs font-bold text-blue-300 uppercase tracking-wider">Stage 2: Creating Quality</div>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed">Build reliable, high-performance systems and clean software with rigorous attention to detail.</div>
+                </div>
+
+                <div class="ccdc-card p-4 rounded-xl bg-slate-900/80 border border-emerald-500/20 group cursor-pointer">
+                  <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-300 font-mono font-bold text-xs">D</span>
+                    <div class="text-xs font-bold text-emerald-300 uppercase tracking-wider">Stage 3: Delivering Value</div>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed">Turn concepts into impactful applications and conversion engines that drive real business growth.</div>
+                </div>
+
+                <div class="ccdc-card p-4 rounded-xl bg-slate-900/80 border border-purple-500/20 group cursor-pointer">
+                  <div class="flex items-center gap-2.5 mb-1.5">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-md bg-purple-500/20 text-purple-300 font-mono font-bold text-xs">C</span>
+                    <div class="text-xs font-bold text-purple-300 uppercase tracking-wider">Stage 4: Capturing Highlights</div>
+                  </div>
+                  <div class="text-xs text-slate-300 leading-relaxed">Measure success, track conversion metrics, showcase key wins, and scale your brand to new heights.</div>
                 </div>
               </div>
             </div>
 
             <div class="lg:col-span-6">
-              <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
                 <img src="assets/approach-ccdc-framework.png" 
                      alt="The FAMTRIX CCDC Approach Diagram" 
-                     class="w-full h-auto object-cover" />
+                     class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-102" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
           </div>
@@ -998,9 +1115,10 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- MAGIC UI: ANIMATED MARQUEE TESTIMONIALS (Continuous Smooth Infinite Flow) -->
+        <!-- REVIEWS & TESTIMONIALS SECTION (HIDDEN BY REQUEST - READY TO ACTIVATE) -->
         <!-- ========================================================================= -->
-        <div class="space-y-6 motion-reveal">
+        <!-- To activate, remove 'hidden' class below -->
+        <div id="reviews-section" class="hidden space-y-6 motion-reveal">
           <div class="flex items-center justify-between">
             <div class="text-xs font-mono text-slate-400 uppercase tracking-widest flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -1256,39 +1374,47 @@
           <!-- Wireframe Right: "The story behind Famtrix" -->
           <div class="lg:col-span-7 space-y-6 motion-reveal delay-200">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-glow border border-brand-primary/20">
-              <span>8 · ABOUT US</span>
+              <span>8 · ABOUT US · OUR ORIGIN</span>
             </div>
 
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
               The story behind Famtrix
             </h2>
 
-            <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-              FAMTRIX was founded with a straightforward mission: to give Mysore’s homegrown startups, enterprises, and ambitious students direct access to high-caliber digital product engineering without the inflated metropolitan agency costs.
+            <div class="inline-block px-3.5 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono font-semibold tracking-wide">
+              ✦ Three Cousins · One Vision · Beyond the Comfort Zone
+            </div>
+
+            <p class="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
+              It all started with a shared spark between three cousins who refused to settle for the ordinary. Stepping boldly out of their comfort zones, they dreamed of creating something truly outstanding—an elite tech collective built on trust, innovation, and passion.
+            </p>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              FAMTRIX was born to empower the young generation. In a fast-evolving digital era, we saw ambitious students, creators, and homegrown businesses held back by lack of modern tech guidance and inflated agency barriers. We set out to change that—putting high-caliber modern web engineering, AI workflow automation, and result-oriented digital marketing right into their hands.
             </p>
 
             <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-              We combine deep technical rigor—from modern full-stack development and cybersecurity audits to AI workflow automation—with conversion-focused marketing. We believe the next generation of great digital products will be built right here in Tier-2 innovation hubs.
+              Rooted in Mysuru with world-class standards, our mission is simple yet powerful: enhance young minds, elevate local businesses with modern technology, and prove that authentic dreams, powered by grit and brotherhood, create extraordinary impact.
             </p>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
-                <div class="text-xl font-bold text-white font-mono">Mysuru</div>
-                <div class="text-xs text-slate-400">Headquartered</div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/30 transition-colors">
+                <div class="text-xl font-bold text-white font-mono">3 Cousins</div>
+                <div class="text-xs text-slate-400">One Shared Vision</div>
               </div>
-              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
-                <div class="text-xl font-bold text-brand-secondary font-mono">100%</div>
-                <div class="text-xs text-slate-400">In-House Quality</div>
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5 hover:border-emerald-500/30 transition-colors">
+                <div class="text-xl font-bold text-brand-secondary font-mono">Comfort Zone: 0</div>
+                <div class="text-xs text-slate-400">Achieving the Outstanding</div>
               </div>
-              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
-                <div class="text-xl font-bold text-cyan-400 font-mono">Full-Cycle</div>
-                <div class="text-xs text-slate-400">Design to Code</div>
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                <div class="text-xl font-bold text-cyan-400 font-mono">Youth Tech</div>
+                <div class="text-xs text-slate-400">Empowering Next-Gen</div>
               </div>
             </div>
 
             <div class="pt-2">
               <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-glow hover:text-white gap-2 group">
-                <span>Read more about our journey & team</span>
+                <span>Connect with our founding team</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
               </a>
             </div>
@@ -1500,7 +1626,8 @@
 
             </div>
 
-            <!-- Wireframe [MAP] Component -->
+            <!-- GOOGLE MAP EMBED (HIDDEN FOR NOW - READY TO ACTIVATE ON USER REQUEST) -->
+            <!--
             <div class="rounded-2xl overflow-hidden glass-card p-1 border border-white/10 shadow-lg">
               <div class="h-56 sm:h-64 w-full rounded-xl overflow-hidden relative">
                 <iframe 
@@ -1517,6 +1644,22 @@
                   <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                   <span>Office visits by appointment in Mysuru</span>
                 </div>
+              </div>
+            </div>
+            -->
+
+            <!-- Direct Consultation & Working Hours Card -->
+            <div class="glass-card rounded-2xl p-5 border border-white/10 space-y-3">
+              <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Direct Consultation & Support</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Based in Mysuru, Karnataka. Available for local in-person strategy sessions or instant virtual consultations worldwide.
+              </p>
+              <div class="pt-2 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                <span class="text-emerald-400 font-semibold">Fast WhatsApp Reply</span>
               </div>
             </div>
 
@@ -1562,7 +1705,7 @@
                           required 
                           class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
                     <option value="" disabled selected>Select a service...</option>
-                    <option value="digital-marketing-software">Digital Marketing Software Suite</option>
+                    <option value="digital-marketing">Digital Marketing & Growth</option>
                     <option value="full-stack-development">Full-Stack Web & App Development</option>
                     <option value="ai-automation">AI & Workflow Automation</option>
                     <option value="cybersecurity">Cybersecurity Audit & Protection</option>
@@ -1614,7 +1757,7 @@
         
         <div class="lg:col-span-2 space-y-4">
           <a href="#" class="inline-block" aria-label="FAMTRIX Home">
-            <img src="assets/famtrix-logo.svg" alt="FAMTRIX Logo" class="h-10 w-auto" />
+            <img src="assets/famtrix-logo.png" alt="FAMTRIX Techno Solutions Logo" class="h-10 sm:h-12 w-auto object-contain" />
           </a>
           <p class="text-slate-300 text-sm max-w-sm">
             Powered by Innovation. Driven by Technology.
@@ -1695,14 +1838,26 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Quick-Trigger Button -->
-  <a href="https://wa.me/918317477430?text=Hello%20FAMTRIX%2C%20I%20visited%20your%20website%20and%20want%20to%20know%20more." 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     aria-label="Direct WhatsApp Chat with FAMTRIX" 
-     class="shiny-button cta-hover-lift fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-500 text-slate-950 shadow-glow-emerald flex items-center justify-center">
-    <i data-lucide="message-circle" class="w-6 h-6 fill-slate-950"></i>
-  </a>
+  <!-- Floating WhatsApp Quick-Trigger Chat Bar - Slight Right in Motion Style -->
+  <div class="fixed bottom-6 right-5 sm:bottom-7 sm:right-7 z-50">
+    <a href="https://wa.me/918317477430?text=Hello%20FAMTRIX%2C%20I%20visited%20your%20website%20and%20want%20to%20know%20more." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Direct WhatsApp Chat with FAMTRIX" 
+       class="whatsapp-motion-bar group flex items-center gap-3 pl-3.5 pr-4 py-2.5 rounded-full bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 text-slate-950 font-bold text-sm shadow-[0_10px_25px_-5px_rgba(16,185,129,0.55)] border border-emerald-300/40 hover:shadow-[0_15px_35px_-5px_rgba(16,185,129,0.75)] hover:scale-105 active:scale-95 transition-all duration-300">
+      <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950/20 text-slate-950">
+        <i data-lucide="message-circle" class="w-5 h-5 fill-slate-950"></i>
+        <span class="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+        </span>
+      </div>
+      <div class="flex flex-col text-left leading-tight pr-1">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-950/80">Need Help?</span>
+        <span class="text-xs font-extrabold text-slate-950">Chat on WhatsApp</span>
+      </div>
+    </a>
+  </div>
 
   <!-- ========================================================================= -->
   <!-- CLIENT INTERACTIVITY & MAGIC UI / MOTION PRIMITIVES SCRIPTS -->

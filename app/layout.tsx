@@ -15,11 +15,11 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'FAMTRIX | Digital Marketing Software & Tech Solutions in Mysuru',
+  title: 'FAMTRIX | Digital Marketing & Tech Solutions in Mysuru',
   description:
-    'Powered by Innovation. Driven by Technology. FAMTRIX delivers digital marketing software, full-stack web development, AI automation, and cybersecurity in Mysuru.',
+    'Powered by Innovation. Driven by Technology. FAMTRIX delivers digital marketing, full-stack web development, AI automation, and cybersecurity in Mysuru.',
   icons: {
-    icon: '/assets/famtrix-logo.svg',
+    icon: '/assets/famtrix-logo.png',
   },
 };
 
