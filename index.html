@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAMTRIX | Digital Marketing Software & Tech Solutions in Mysuru</title>
+  <!-- SEO & Social Graph Meta Tags -->
+  <meta name="description" content="Powered by Innovation. Driven by Technology. FAMTRIX delivers digital marketing software, full-stack web development, AI automation, and cybersecurity in Mysuru." />
+  <meta name="keywords" content="FAMTRIX, tech solutions Mysuru, digital marketing software Mysore, full-stack development, AI automation, cybersecurity Mysore, startup MVP development" />
+  <meta name="author" content="FAMTRIX Digital Solutions" />
+  <meta property="og:title" content="FAMTRIX | Digital Marketing Software & Tech Solutions in Mysuru" />
+  <meta property="og:description" content="Powered by Innovation. Driven by Technology. Custom web software, AI workflows, and digital marketing built for startups, local businesses, and students in Mysuru." />
+  <meta property="og:image" content="assets/hero-banner.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAMTRIX | Digital Solutions for a Smarter Tomorrow" />
+  <meta name="twitter:description" content="Powered by Innovation. Driven by Technology. Built in Mysuru for startups, businesses, and students." />
+  <meta name="twitter:image" content="assets/hero-banner.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/famtrix-logo.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration matching DESIGN.md -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              primary: '#0EA5E9',
+              'primary-deep': '#2563EB',
+              secondary: '#10B981',
+              'secondary-light': '#22C55E',
+              glow: '#38BDF8',
+              whatsapp: '#25D366',
+            },
+            surface: {
+              canvas: '#050814',
+              subtle: '#091124',
+              card: 'rgba(15, 23, 42, 0.65)',
+              elevated: '#0F172A',
+            }
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px -4px rgba(14, 165, 233, 0.4)',
+            'glow-emerald': '0 0 25px -4px rgba(16, 185, 129, 0.4)',
+            'glow-button': '0 4px 25px rgba(14, 165, 233, 0.45)',
+            'glow-button-hover': '0 8px 35px rgba(14, 165, 233, 0.65)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+          },
+          animation: {
+            'gradient-slow': 'gradient 8s ease infinite',
+            'marquee': 'marquee 28s linear infinite',
+            'marquee-reverse': 'marquee-reverse 28s linear infinite',
+            'shimmer': 'shimmer 2.5s linear infinite',
+            'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+            'pulse-subtle': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            'marquee-reverse': {
+              '0%': { transform: 'translateX(-50%)' },
+              '100%': { transform: 'translateX(0%)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* ========================================================================= */
+    /* MAGIC UI & MOTION PRIMITIVES CUSTOM STYLING */
+    /* ========================================================================= */
+
+    /* Global Layout & Overflow Containment */
+    html, body {
+      max-width: 100vw;
+      overflow-x: clip;
+    }
+
+    /* Glassmorphism System */
+    .glass-nav {
+      background: rgba(5, 8, 20, 0.85);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.62);
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Magic UI: Animated Gradient Text */
+    .animated-gradient-text {
+      background: linear-gradient(to right, #ffffff 0%, #38bdf8 30%, #10b981 60%, #38bdf8 90%, #ffffff 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-shine 6s ease-in-out infinite;
+    }
+    @keyframes text-shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    /* Magic UI: Shiny Button Sheen */
+    .shiny-button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .shiny-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+      transform: skewX(-20deg);
+      transition: none;
+    }
+    .shiny-button:hover::after {
+      left: 200%;
+      transition: left 0.75s ease-in-out;
+    }
+    .shiny-button:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.55);
+    }
+    .shiny-button:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    /* Magic UI: Magic Card Spotlight Effect */
+    .magic-card {
+      position: relative;
+      background: rgba(15, 23, 42, 0.65);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+    }
+    .magic-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(350px circle at var(--mouse-x, -999px) var(--mouse-y, -999px), rgba(14, 165, 233, 0.14), transparent 80%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .magic-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 1px;
+      background: radial-gradient(300px circle at var(--mouse-x, -999px) var(--mouse-y, -999px), rgba(56, 189, 248, 0.5), transparent 80%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .magic-card:hover::before,
+    .magic-card:hover::after {
+      opacity: 1;
+    }
+    .magic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.25);
+    }
+
+    /* Magic UI: Marquee Fade Masks */
+    .marquee-mask {
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
+    /* Motion Primitives: Scroll-Triggered Reveal */
+    .motion-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .motion-reveal.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Staggered transition delays for grid cards */
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+    /* Interactive CTA scale & glow */
+    .cta-hover-lift {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cta-hover-lift:hover {
+      transform: translateY(-2px) scale(1.025);
+    }
+    .cta-hover-lift:active {
+      transform: translateY(0) scale(0.98);
+    }
+  </style>
+</head>
+<body class="bg-surface-canvas text-slate-100 font-sans antialiased selection:bg-brand-primary selection:text-white relative overflow-x-hidden min-h-screen">
+
+  <!-- ========================================================================= -->
+  <!-- 0 · HEADER / NAVIGATION BAR (Wireframe Fold 0) -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group" aria-label="FAMTRIX Homepage">
+        <img src="assets/famtrix-logo.svg" alt="FAMTRIX Digital Solutions" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-brand-glow transition-colors">Services</a>
+        <a href="#featured-product" class="hover:text-brand-glow transition-colors">Solutions</a>
+        <a href="#who-we-help" class="hover:text-brand-glow transition-colors">Who We Help</a>
+        <a href="#why-famtrix" class="hover:text-brand-glow transition-colors">Why FAMTRIX</a>
+        <a href="#proof" class="hover:text-brand-glow transition-colors">Case Studies</a>
+        <a href="#about" class="hover:text-brand-glow transition-colors">About</a>
+        <a href="#blog" class="hover:text-brand-glow transition-colors">Blog</a>
+        <a href="#contact" class="hover:text-brand-glow transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action Items: WhatsApp & Magic UI Shiny CTA -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <!-- Direct WhatsApp Trigger with hardcoded phone: 8317477430 -->
+        <a href="https://wa.me/918317477430?text=Hi%20FAMTRIX%2C%20I%20would%20like%20to%20inquire%20about%20your%20digital%20solutions." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-950/50 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-900/50 hover:border-emerald-400/60 hover:scale-105 active:scale-95 transition-all duration-200">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 fill-emerald-400/20"></i>
+          <span>WhatsApp: <strong class="text-white font-mono">8317477430</strong></span>
+        </a>
+
+        <!-- Magic UI Shiny Consultation CTA Button -->
+        <a href="#contact" 
+           class="shiny-button group inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-brand-primary to-brand-primary-deep shadow-glow-button">
+          <span>Get a Free Consultation</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <a href="https://wa.me/918317477430" target="_blank" class="p-2 text-emerald-400 hover:text-emerald-300">
+          <i data-lucide="phone-call" class="w-5 h-5"></i>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-nav border-b border-white/10 px-6 py-6 space-y-4">
+      <nav class="flex flex-col space-y-3 text-base font-medium text-slate-300">
+        <a href="#services" class="mobile-link py-1 hover:text-brand-glow">Services</a>
+        <a href="#featured-product" class="mobile-link py-1 hover:text-brand-glow">Solutions</a>
+        <a href="#who-we-help" class="mobile-link py-1 hover:text-brand-glow">Who We Help</a>
+        <a href="#why-famtrix" class="mobile-link py-1 hover:text-brand-glow">Why FAMTRIX</a>
+        <a href="#proof" class="mobile-link py-1 hover:text-brand-glow">Case Studies</a>
+        <a href="#about" class="mobile-link py-1 hover:text-brand-glow">About</a>
+        <a href="#blog" class="mobile-link py-1 hover:text-brand-glow">Blog</a>
+        <a href="#contact" class="mobile-link py-1 hover:text-brand-glow">Contact</a>
+      </nav>
+      <div class="pt-4 border-t border-white/10 space-y-3">
+        <a href="https://wa.me/918317477430" target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 font-semibold text-sm">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>WhatsApp: 8317477430</span>
+        </a>
+        <a href="#contact" class="mobile-link flex items-center justify-center w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-primary-deep text-white font-semibold text-sm shadow-glow-button">
+          Get a Free Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative pt-24">
+
+    <!-- ========================================================================= -->
+    <!-- 1 · HERO SECTION (Wireframe Section 1 with Magic UI Aurora & Animated Gradient Text) -->
+    <!-- ========================================================================= -->
+    <section class="relative min-h-[92vh] flex items-center justify-center py-16 lg:py-24 overflow-hidden" id="hero">
+      
+      <!-- Magic UI Animated Glowing Aurora Background -->
+      <div class="absolute inset-0 pointer-events-none -z-10 overflow-hidden" aria-hidden="true" role="presentation">
+        <!-- Floating Aurora Orb 1 (Cyan) -->
+        <div class="absolute -top-[10%] left-[15%] w-[500px] h-[500px] rounded-full bg-cyan-500/15 blur-[120px] animate-pulse-subtle"></div>
+        <!-- Floating Aurora Orb 2 (Emerald) -->
+        <div class="absolute top-[30%] -right-[5%] w-[450px] h-[450px] rounded-full bg-emerald-500/12 blur-[130px] animate-pulse-subtle" style="animation-delay: 2s;"></div>
+        <!-- Floating Aurora Orb 3 (Deep Blue) -->
+        <div class="absolute -bottom-[10%] left-[35%] w-[400px] h-[400px] rounded-full bg-blue-600/15 blur-[100px]"></div>
+        <!-- SVG Mesh Grid Pattern -->
+        <img src="assets/hero-bg-pattern.svg" alt="Decorative geometric tech background mesh" role="presentation" aria-hidden="true" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Left Column: Motion-reveal on scroll -->
+          <div class="lg:col-span-7 space-y-8 text-left motion-reveal">
+            
+            <!-- Magic UI Pill Badge with Ping Indicator -->
+            <div class="inline-flex max-w-full items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-slate-900/80 border border-emerald-500/30 text-emerald-400 backdrop-blur-md shadow-sm">
+              <span class="relative flex h-2 w-2 shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span class="truncate sm:whitespace-normal">Built in Mysuru for Startups, Businesses & Students</span>
+            </div>
+
+            <!-- Wireframe Exact Headline with Magic UI Animated Gradient Text -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
+              Digital marketing software and <span class="animated-gradient-text">tech solutions</span> for growing businesses
+            </h1>
+
+            <!-- Sub-headline from Wireframe & Brand Pillars -->
+            <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl">
+              <span class="text-white font-semibold">Powered by Innovation. Driven by Technology.</span><br />
+              Tailored software development, high-converting digital marketing, and automated workflows. Remote or in-person right here in Mysuru.
+            </p>
+
+            <!-- Dual CTA Action Buttons with Magic UI Shiny Effect & Hover Lift -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a href="#contact" 
+                 class="shiny-button cta-hover-lift inline-flex items-center justify-center px-7 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r from-brand-secondary to-brand-primary shadow-glow-emerald">
+                <span>Get a Free Consultation</span>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 ml-2"></i>
+              </a>
+
+              <a href="#services" 
+                 class="cta-hover-lift inline-flex items-center justify-center px-7 py-3.5 rounded-full text-base font-medium text-slate-200 bg-slate-900/70 border border-white/15 hover:bg-slate-800/90 hover:border-slate-300/40 hover:text-white">
+                <span>View Services</span>
+                <i data-lucide="chevron-down" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+
+            <!-- Quick Trust / Value Highlights -->
+            <div class="pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+              <div>
+                <div class="text-2xl font-bold font-mono text-white">50+</div>
+                <div class="text-xs text-slate-400">Happy Clients</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold font-mono text-brand-secondary">100+</div>
+                <div class="text-xs text-slate-400">Projects Delivered</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold font-mono text-brand-primary">100%</div>
+                <div class="text-xs text-slate-400">Secure Solutions</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold font-mono text-emerald-400">98%</div>
+                <div class="text-xs text-slate-400">Client Satisfaction</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Column: Banner Visual with Border Beam Glow -->
+          <div class="lg:col-span-5 relative group motion-reveal delay-200">
+            <div class="relative rounded-2xl overflow-hidden glass-card p-2 shadow-2xl border border-white/15 hover:border-cyan-500/40 transition-colors duration-500">
+              <img src="assets/hero-banner.png" 
+                   alt="FAMTRIX Digital Solutions Hero Banner" 
+                   class="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.015]" />
+              
+              <!-- Floating Pill Indicator -->
+              <div class="absolute bottom-6 left-6 right-6 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-slate-200 font-medium">Mysuru Engineering Hub Active</span>
+                </div>
+                <span class="text-brand-glow font-mono font-semibold">Available for Q4/Q1</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Ticker -->
+    <div class="border-y border-white/5 bg-slate-950/40 py-6 motion-reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6 text-slate-400 text-xs font-mono">
+        <span class="uppercase tracking-widest text-slate-500">Trusted Architecture Stack:</span>
+        <div class="flex flex-wrap items-center gap-8 text-sm">
+          <span class="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors"><i data-lucide="atom" class="w-4 h-4 text-cyan-400"></i> React</span>
+          <span class="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"><i data-lucide="layers" class="w-4 h-4 text-white"></i> Next.js</span>
+          <span class="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors"><i data-lucide="server" class="w-4 h-4 text-emerald-400"></i> Node.js</span>
+          <span class="flex items-center gap-2 text-slate-300 hover:text-green-500 transition-colors"><i data-lucide="database" class="w-4 h-4 text-green-500"></i> MongoDB</span>
+          <span class="flex items-center gap-2 text-slate-300 hover:text-amber-400 transition-colors"><i data-lucide="cloud" class="w-4 h-4 text-amber-400"></i> AWS Cloud</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 2 · WHAT WE DO (Wireframe Section 2 with Magic UI Spotlight Cards) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 relative" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header: Motion Reveal -->
+        <div class="max-w-3xl mb-16 space-y-4 motion-reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-glow border border-brand-primary/20">
+            <span>2 · WHAT WE DO</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Everything you need to grow online
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            End-to-end digital solutions engineered to scale early-stage ventures and empower local businesses with cutting-edge technology.
+          </p>
+        </div>
+
+        <!-- 4 Magic Cards with Cursor Spotlight Tracking -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Digital Marketing Software -->
+          <div class="magic-card p-6 flex flex-col justify-between group motion-reveal delay-100">
+            <div class="space-y-4 relative z-10">
+              <div class="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
+                <img src="assets/digital-marketing-service.png" 
+                     alt="Digital Marketing Software" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/90 text-slate-950 tracking-wide uppercase">
+                  Flagship
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
+                Digital Marketing Software
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Flagship growth suite. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-white/5 relative z-10">
+              <a href="#featured-product" class="inline-flex items-center text-sm font-semibold text-brand-secondary hover:text-emerald-300 gap-1.5 group/link">
+                <span>Learn more</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: AI & Automation -->
+          <div class="magic-card p-6 flex flex-col justify-between group motion-reveal delay-200">
+            <div class="space-y-4 relative z-10">
+              <div class="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
+                <img src="assets/ai-automation-service.png" 
+                     alt="AI & Automation" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-cyan-500/90 text-slate-950 tracking-wide uppercase">
+                  Productivity
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
+                AI & Automation
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Save hours of manual effort by automating repetitive customer support, billing, social publishing, and internal workflows.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-white/5 relative z-10">
+              <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-primary hover:text-cyan-300 gap-1.5 group/link">
+                <span>Request a quote</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Full-Stack Development -->
+          <div class="magic-card p-6 flex flex-col justify-between group motion-reveal delay-300">
+            <div class="space-y-4 relative z-10">
+              <div class="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
+                <img src="assets/full-stack-dev-service.png" 
+                     alt="Full-Stack Development" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-500/90 text-white tracking-wide uppercase">
+                  Custom Code
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
+                Full-Stack Development
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                High-performance websites, custom SaaS platforms, and mobile apps built to your exact specifications using React, Next.js, and Node.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-white/5 relative z-10">
+              <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-primary hover:text-cyan-300 gap-1.5 group/link">
+                <span>Request a quote</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Cybersecurity -->
+          <div class="magic-card p-6 flex flex-col justify-between group motion-reveal delay-400">
+            <div class="space-y-4 relative z-10">
+              <div class="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
+                <img src="assets/cybersecurity-service.png" 
+                     alt="Cybersecurity" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-purple-500/90 text-white tracking-wide uppercase">
+                  Protection
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
+                Cybersecurity
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Protect your site, customer data, and payments with bulletproof audits, SSL certification, DDoS defense, and database encryption.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-white/5 relative z-10">
+              <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-primary hover:text-cyan-300 gap-1.5 group/link">
+                <span>Request a quote</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Additional Services Note -->
+        <div class="mt-8 p-4 rounded-xl bg-slate-900/50 border border-white/5 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-300 gap-4 motion-reveal">
+          <div class="flex items-center gap-3">
+            <span class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </span>
+            <span>Also offering <strong>Graphic Design & Brand Kits</strong> (logos, social creatives, pitch decks) and <strong>Omnichannel SEO</strong>.</span>
+          </div>
+          <a href="#contact" class="text-brand-glow hover:underline font-semibold whitespace-nowrap">Inquire About Custom Bundles &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3 · FEATURED PRODUCT (Wireframe Section 3 with Border Beam Visuals) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-surface-subtle/50 relative border-t border-white/5" id="featured-product">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Product Showcase Media (Left as in wireframe) -->
+          <div class="lg:col-span-6 relative group motion-reveal">
+            <div class="glass-card rounded-2xl p-2 relative shadow-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-500">
+              <img src="assets/featured-product-showcase.png" 
+                   alt="FAMTRIX Digital Marketing Software Suite Demo" 
+                   class="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-102" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between text-xs text-slate-300">
+                <span class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Live Interactive Dashboard
+                </span>
+                <span class="font-mono text-emerald-400 font-medium">v2.4 Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Details (Right as in wireframe) -->
+          <div class="lg:col-span-6 space-y-6 motion-reveal delay-200">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <span>3 · FEATURED PRODUCT</span>
+            </div>
+
+            <!-- Wireframe Title: "[Product name]: marketing made simple" -->
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              <span class="brand-accent-text">FAMTRIX Growth Suite:</span> marketing made simple
+            </h2>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+              Designed specifically for growing companies, local retail, and digital startups. Stop juggling 5 disconnected tools—run your social media, customer conversions, and local ad campaigns from a single unified hub.
+            </p>
+
+            <!-- Feature Bullets from Wireframe -->
+            <ul class="space-y-4 pt-2">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 p-1 rounded-full bg-emerald-500/20 text-emerald-400">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-base">[Feature 1] Multi-Platform Campaign Automation</h4>
+                  <p class="text-slate-400 text-sm">Schedule, publish, and track social campaigns across Instagram, Google, and Meta with automated optimization.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="mt-1 p-1 rounded-full bg-cyan-500/20 text-cyan-400">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-base">[Feature 2] Instant WhatsApp & Local Lead Sync</h4>
+                  <p class="text-slate-400 text-sm">Capture customer inquiries from your site and forward them immediately to your WhatsApp (8317477430) for zero lead drop-off.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="mt-1 p-1 rounded-full bg-blue-500/20 text-blue-400">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-base">[Feature 3] Real-time ROI & Customer Analytics</h4>
+                  <p class="text-slate-400 text-sm">Simple, jargon-free dashboards showing exactly how many clicks, calls, and orders your marketing generated this week.</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- CTA Button: "Book a Demo" with Shiny Hover effect -->
+            <div class="pt-4">
+              <a href="#contact" 
+                 class="shiny-button cta-hover-lift inline-flex items-center justify-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-slate-900 border border-brand-primary/50 hover:bg-brand-primary hover:border-brand-primary">
+                <span>Book a Demo</span>
+                <i data-lucide="calendar" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4 · WHO WE HELP (Wireframe Section 4 - Built for people starting & growing) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 relative" id="who-we-help">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 motion-reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-glow border border-brand-primary/20">
+            <span>4 · WHO WE HELP</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Built for people starting and growing
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Whether you are launching your first venture, expanding a local Mysuru business, or kicking off your tech career.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Column 1: Startups -->
+          <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group motion-reveal delay-100">
+            <div class="space-y-4">
+              <div class="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
+                <img src="assets/who-we-help-startups.png" 
+                     alt="Startups Solution by FAMTRIX" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-white">Startups</h3>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-300">Launch & Scale</span>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong>The problem we solve:</strong> Get your MVP from whiteboard to production in weeks, not months. Scalable cloud architectures that impress early investors.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 pt-2">
+                <li class="flex items-center gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i> Fast MVP delivery in 30 days</li>
+                <li class="flex items-center gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i> Conversion-focused web architectures</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <a href="#contact" class="text-sm font-semibold text-brand-glow hover:underline flex items-center justify-between">
+                <span>Start building with us</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Local Businesses -->
+          <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group motion-reveal delay-200">
+            <div class="space-y-4">
+              <div class="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
+                <img src="assets/who-we-help-businesses.png" 
+                     alt="Local Businesses Solution by FAMTRIX" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-white">Local Businesses</h3>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300">Mysuru & Beyond</span>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong>The problem we solve:</strong> Dominate local search, drive foot traffic, and convert online visitors into loyal walk-in customers through localized marketing.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 pt-2">
+                <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i> Google Business Profile optimization</li>
+                <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i> Direct WhatsApp order integration</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <a href="#contact" class="text-sm font-semibold text-brand-secondary hover:underline flex items-center justify-between">
+                <span>Grow local sales</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: Students -->
+          <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group motion-reveal delay-300">
+            <div class="space-y-4">
+              <div class="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
+                <img src="assets/who-we-help-students.png" 
+                     alt="Students Programs by FAMTRIX" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-white">Students</h3>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-indigo-500/20 text-indigo-300">Skill Development</span>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong>Training, projects or internships:</strong> Hands-on mentorship from working engineers. Build production-grade code, ship real apps, and gain certified industry credentials.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 pt-2">
+                <li class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-indigo-400"></i> Real client projects & internships</li>
+                <li class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-indigo-400"></i> Full-stack, AI & digital marketing tracks</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <a href="#contact" class="text-sm font-semibold text-indigo-400 hover:underline flex items-center justify-between">
+                <span>Join our student programs</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5 · WHY FAMTRIX (Wireframe Section 5 - Why teams choose us) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-surface-subtle/50 relative border-t border-white/5" id="why-famtrix">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16 space-y-4 motion-reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span>5 · WHY FAMTRIX</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Why teams choose us
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            We bridge the gap between world-class engineering standards and local accessibility in Mysuru.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Pillar 1: Local, Mysuru-based -->
+          <div class="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-100">
+            <div class="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
+              <img src="assets/why-mysuru-based.png" 
+                   alt="Local, Mysuru-based FAMTRIX team" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-emerald-500/20 text-emerald-400">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Local, Mysuru-based</h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Easy to meet and quick to respond. No across-timezone delays—sit down with us over coffee in Mysuru anytime.
+            </p>
+          </div>
+
+          <!-- Pillar 2: One team -->
+          <div class="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-200">
+            <div class="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
+              <img src="assets/why-one-team.png" 
+                   alt="One team for software, design, and marketing" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-cyan-500/20 text-cyan-400">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">One team</h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Software, design and marketing together under one roof. No miscommunication between developers and marketers.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Affordable -->
+          <div class="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-300">
+            <div class="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
+              <img src="assets/why-budget-friendly.png" 
+                   alt="Affordable pricing that fits early budgets" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-blue-500/20 text-blue-400">
+                <i data-lucide="wallet" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Affordable</h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Pricing that fits early-stage budgets. Transparent milestone-based payments with zero hidden agency markups.
+            </p>
+          </div>
+
+          <!-- Pillar 4: Remote or in person -->
+          <div class="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-400">
+            <div class="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
+              <img src="assets/why-flexible-collaboration.png" 
+                   alt="Work remotely or in person" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-purple-500/20 text-purple-400">
+                <i data-lucide="laptop" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Remote or in person</h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Work with us the way that suits you. Asynchronous Slack/Git updates, Google Meet standups, or face-to-face sessions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6 · PROOF & RESULTS (Wireframe Section 6 with Magic UI Marquee Testimonials) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 relative" id="proof">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16 space-y-4 motion-reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-glow border border-brand-primary/20">
+            <span>6 · PROOF & METHODOLOGY</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Work and results
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Proven execution through our proprietary four-stage framework and real client outcomes.
+          </p>
+        </div>
+
+        <!-- The FAMTRIX CCDC Framework Feature Banner -->
+        <div class="glass-card rounded-3xl p-6 sm:p-10 mb-16 border border-brand-primary/20 shadow-glow-cyan/10 motion-reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono bg-emerald-500/10 text-emerald-400">
+                <span>PROVEN FRAMEWORK</span>
+              </div>
+              <h3 class="text-3xl font-extrabold text-white leading-tight">
+                From Ideas to Impact — The <span class="text-brand-secondary">CCDC Approach</span>
+              </h3>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Our CCDC approach guides every engagement from understanding your business goals to delivering high-performance tech solutions and measurable value.
+              </p>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
+                  <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Stage 1: Creating Value</div>
+                  <div class="text-xs text-slate-300">Understand your goals and architect the right digital solutions.</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
+                  <div class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Stage 2: Creating Quality</div>
+                  <div class="text-xs text-slate-300">Build reliable, high-performance systems with rigorous attention to detail.</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
+                  <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Stage 3: Delivering Value</div>
+                  <div class="text-xs text-slate-300">Turn concepts into impactful applications that drive real business growth.</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/5">
+                  <div class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Stage 4: Capturing Highlights</div>
+                  <div class="text-xs text-slate-300">Measure success, track conversion metrics, and scale your brand.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <img src="assets/approach-ccdc-framework.png" 
+                     alt="The FAMTRIX CCDC Approach Diagram" 
+                     class="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wireframe 3 Case Study Images Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          
+          <!-- Case Study 1 -->
+          <div class="glass-card rounded-2xl p-5 space-y-4 group motion-reveal delay-100">
+            <div class="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
+              <img src="assets/digital-marketing-service.png" 
+                   alt="Case Study 1: Mysuru Retail Growth" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-950/80 text-emerald-400 font-mono text-xs font-bold">
+                +310% Leads
+              </div>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-brand-primary uppercase tracking-wider mb-1">E-Commerce & Retail</div>
+              <h4 class="text-lg font-bold text-white group-hover:text-brand-glow transition-colors">Mysuru Heritage Silk Store</h4>
+              <p class="text-slate-400 text-xs mt-1">Transformed local offline retail store into an omnichannel e-commerce brand with automated WhatsApp checkout.</p>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="glass-card rounded-2xl p-5 space-y-4 group motion-reveal delay-200">
+            <div class="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
+              <img src="assets/full-stack-dev-service.png" 
+                   alt="Case Study 2: EdTech Platform" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-950/80 text-cyan-400 font-mono text-xs font-bold">
+                12,000+ Users
+              </div>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-1">EdTech SaaS</div>
+              <h4 class="text-lg font-bold text-white group-hover:text-brand-glow transition-colors">EduMatrix Learning Platform</h4>
+              <p class="text-slate-400 text-xs mt-1">Engineered a real-time test prep and student assessment portal with Next.js, Node.js, and AWS serverless backend.</p>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="glass-card rounded-2xl p-5 space-y-4 group motion-reveal delay-300">
+            <div class="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
+              <img src="assets/ai-automation-service.png" 
+                   alt="Case Study 3: Logistics Automation" 
+                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-950/80 text-purple-400 font-mono text-xs font-bold">
+                -85% Manual Time
+              </div>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-purple-400 uppercase tracking-wider mb-1">AI Automation</div>
+              <h4 class="text-lg font-bold text-white group-hover:text-brand-glow transition-colors">Karnataka Agri-Supply Chain</h4>
+              <p class="text-slate-400 text-xs mt-1">Automated inventory sync and invoice processing with computer vision and WhatsApp notification pipelines.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- MAGIC UI: ANIMATED MARQUEE TESTIMONIALS (Continuous Smooth Infinite Flow) -->
+        <!-- ========================================================================= -->
+        <div class="space-y-6 motion-reveal">
+          <div class="flex items-center justify-between">
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-widest flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>What Mysuru Founders & Leaders Say About FAMTRIX</span>
+            </div>
+            <span class="text-xs text-slate-500 font-mono hidden sm:inline">Hover to pause flow</span>
+          </div>
+
+          <!-- Infinite Marquee Track with Edge Gradients -->
+          <div class="relative overflow-hidden marquee-mask group py-2">
+            <div class="flex w-max space-x-6 animate-marquee group-hover:[animation-play-state:paused]">
+              
+              <!-- Review 1 (Rohit Kumar) -->
+              <div class="w-[380px] sm:w-[420px] shrink-0 glass-card rounded-2xl p-6 border border-white/10 space-y-3">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-slate-200 italic leading-relaxed">
+                  "FAMTRIX completely revamped our digital presence. Having a dedicated tech team here in Mysuru that understands software and marketing made all the difference. Inquiries grew by 300% in 90 days."
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-secondary to-brand-primary flex items-center justify-center font-bold text-slate-950 text-xs">
+                    RK
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Rohit Kumar</div>
+                    <div class="text-xs text-slate-400">Founder & CEO, Mysuru TechVentures</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 2 (Ananya Rao) -->
+              <div class="w-[380px] sm:w-[420px] shrink-0 glass-card rounded-2xl p-6 border border-white/10 space-y-3">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-slate-200 italic leading-relaxed">
+                  "The direct WhatsApp lead integration they built skyrocketed our weekend walk-ins and phone orders. We get instant notifications the second someone browses our store catalog."
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-purple-500 flex items-center justify-center font-bold text-white text-xs">
+                    AR
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Ananya Rao</div>
+                    <div class="text-xs text-slate-400">Owner, Mysore Silk & Crafts</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 3 (Dr. Vikram Hegde) -->
+              <div class="w-[380px] sm:w-[420px] shrink-0 glass-card rounded-2xl p-6 border border-white/10 space-y-3">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-slate-200 italic leading-relaxed">
+                  "Outstanding cybersecurity audit and patient scheduling web application. Highly responsive, transparent with billing, and physically available for meetings in Saraswathipuram."
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-white text-xs">
+                    VH
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Dr. Vikram Hegde</div>
+                    <div class="text-xs text-slate-400">Managing Director, Hegde Wellness Clinics</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 4 (Darshan Gowda - Student) -->
+              <div class="w-[380px] sm:w-[420px] shrink-0 glass-card rounded-2xl p-6 border border-white/10 space-y-3">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-slate-200 italic leading-relaxed">
+                  "The internship at FAMTRIX gave me practical experience on real client Next.js and AWS projects. That portfolio directly helped me crack my dream frontend role right after college."
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-400 to-teal-500 flex items-center justify-center font-bold text-slate-950 text-xs">
+                    DG
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Darshan Gowda</div>
+                    <div class="text-xs text-slate-400">Alumnus, NIE Mysuru & Software Engineer</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Duplicate Set for Seamless Loop -->
+              <div class="w-[380px] sm:w-[420px] shrink-0 glass-card rounded-2xl p-6 border border-white/10 space-y-3">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-slate-200 italic leading-relaxed">
+                  "FAMTRIX completely revamped our digital presence. Having a dedicated tech team here in Mysuru that understands software and marketing made all the difference. Inquiries grew by 300% in 90 days."
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-secondary to-brand-primary flex items-center justify-center font-bold text-slate-950 text-xs">
+                    RK
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Rohit Kumar</div>
+                    <div class="text-xs text-slate-400">Founder & CEO, Mysuru TechVentures</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-[380px] sm:w-[420px] shrink-0 glass-card rounded-2xl p-6 border border-white/10 space-y-3">
+                <div class="flex items-center gap-1 text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-slate-200 italic leading-relaxed">
+                  "The direct WhatsApp lead integration they built skyrocketed our weekend walk-ins and phone orders. We get instant notifications the second someone browses our store catalog."
+                </p>
+                <div class="pt-2 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-purple-500 flex items-center justify-center font-bold text-white text-xs">
+                    AR
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Ananya Rao</div>
+                    <div class="text-xs text-slate-400">Owner, Mysore Silk & Crafts</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7 · LEAD MAGNET (Wireframe Section 7 - Free marketing checklist) -->
+    <!-- ========================================================================= -->
+    <section class="py-20 relative overflow-hidden" id="lead-magnet">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-emerald-500/30 bg-gradient-to-br from-slate-900/90 via-slate-950 to-slate-900/90 shadow-2xl motion-reveal">
+          
+          <!-- Background accent rings -->
+          <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <div class="lg:col-span-7 space-y-3 text-left">
+              <div class="inline-flex max-w-full items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                <i data-lucide="gift" class="w-3.5 h-3.5 shrink-0"></i>
+                <span class="truncate">7 · COMPLIMENTARY RESOURCE</span>
+              </div>
+              
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
+                Free marketing checklist for local businesses
+              </h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                The exact 25-point digital checklist we use to audit Google Business Profiles, website speed, local SEO, and WhatsApp conversion funnels in Mysuru. Instant PDF download.
+              </p>
+            </div>
+
+            <!-- Wireframe Form: [Your email] + "Download Free" button with Shiny effect -->
+            <div class="lg:col-span-5">
+              <form id="lead-magnet-form" onsubmit="event.preventDefault(); handleLeadMagnet();" class="space-y-3">
+                <div class="flex flex-col sm:flex-row items-stretch gap-2.5">
+                  <div class="relative flex-1">
+                    <label for="lead-email" class="sr-only">Your email address</label>
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                      <i data-lucide="mail" class="w-4 h-4"></i>
+                    </div>
+                    <input type="email" 
+                           id="lead-email" 
+                           name="email"
+                           required 
+                           aria-label="Your email address"
+                           placeholder="Your email address" 
+                           class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all" />
+                  </div>
+                  <button type="submit" 
+                          id="lead-btn"
+                          class="shiny-button cta-hover-lift px-6 py-3 rounded-xl text-sm font-semibold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 shadow-glow-emerald whitespace-nowrap flex items-center justify-center gap-2">
+                    <span>Download Free</span>
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                  </button>
+                </div>
+                <div id="lead-feedback" class="text-xs text-slate-400 flex items-center justify-between gap-1.5 flex-wrap">
+                  <div class="flex items-center gap-1.5">
+                    <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>Zero spam. We respect your inbox privacy.</span>
+                  </div>
+                  <a href="landing-page.html" class="text-brand-glow hover:underline font-semibold flex items-center gap-1">
+                    <span>Dedicated Page</span>
+                    <i data-lucide="external-link" class="w-3 h-3"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8 · ABOUT SECTION (Wireframe Section 8 - The story behind Famtrix) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-surface-subtle/50 relative border-t border-white/5" id="about">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Wireframe Left: [PHOTO: founder / team] -->
+          <div class="lg:col-span-5 relative group motion-reveal">
+            <div class="glass-card rounded-2xl p-2 relative shadow-2xl border border-white/10 overflow-hidden hover:border-emerald-500/40 transition-colors duration-500">
+              <img src="assets/why-mysuru-based.png" 
+                   alt="FAMTRIX Team in Mysuru" 
+                   class="w-full h-80 sm:h-96 object-cover rounded-xl" />
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10">
+                <div class="text-sm font-bold text-white">The Engineering & Creative Collective</div>
+                <div class="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  <span>HQ: Mysuru, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wireframe Right: "The story behind Famtrix" -->
+          <div class="lg:col-span-7 space-y-6 motion-reveal delay-200">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-glow border border-brand-primary/20">
+              <span>8 · ABOUT US</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              The story behind Famtrix
+            </h2>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+              FAMTRIX was founded with a straightforward mission: to give Mysore’s homegrown startups, enterprises, and ambitious students direct access to high-caliber digital product engineering without the inflated metropolitan agency costs.
+            </p>
+
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              We combine deep technical rigor—from modern full-stack development and cybersecurity audits to AI workflow automation—with conversion-focused marketing. We believe the next generation of great digital products will be built right here in Tier-2 innovation hubs.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
+                <div class="text-xl font-bold text-white font-mono">Mysuru</div>
+                <div class="text-xs text-slate-400">Headquartered</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
+                <div class="text-xl font-bold text-brand-secondary font-mono">100%</div>
+                <div class="text-xs text-slate-400">In-House Quality</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
+                <div class="text-xl font-bold text-cyan-400 font-mono">Full-Cycle</div>
+                <div class="text-xs text-slate-400">Design to Code</div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-glow hover:text-white gap-2 group">
+                <span>Read more about our journey & team</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9 · RESOURCES / BLOG (Wireframe Section 9 - From the blog) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 relative" id="blog">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-4 motion-reveal">
+          <div class="max-w-2xl space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary/10 text-brand-glow border border-brand-primary/20">
+              <span>9 · RESOURCES</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+              From the blog
+            </h2>
+            <p class="text-slate-400 text-base sm:text-lg">
+              Tactical insights, practical blueprints, and technology frameworks curated for Mysuru entrepreneurs and builders.
+            </p>
+          </div>
+          <a href="#contact" class="text-sm font-semibold text-brand-secondary hover:underline flex items-center gap-1">
+            <span>View all articles</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Post 1 -->
+          <article class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between motion-reveal delay-100">
+            <div>
+              <div class="h-48 overflow-hidden bg-slate-900 relative">
+                <img src="assets/digital-marketing-service.png" 
+                     alt="Digital marketing tips for Mysuru businesses" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute top-3 left-3 px-2 py-0.5 rounded text-[11px] font-mono bg-slate-950/80 text-emerald-400">
+                  Local Growth
+                </div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="text-xs text-slate-400 flex items-center gap-3">
+                  <span>5 min read</span>
+                  <span>•</span>
+                  <span>November 2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors leading-snug">
+                  Digital marketing tips for Mysuru businesses
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  How local retail and service providers in Mysuru can capture high-intent Google Maps searches and convert traffic directly on WhatsApp.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2">
+              <a href="#contact" class="text-xs font-semibold text-brand-glow hover:underline flex items-center gap-1">
+                <span>Read Article</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between motion-reveal delay-200">
+            <div>
+              <div class="h-48 overflow-hidden bg-slate-900 relative">
+                <img src="assets/featured-product-showcase.png" 
+                     alt="How to get your first 100 customers online" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute top-3 left-3 px-2 py-0.5 rounded text-[11px] font-mono bg-slate-950/80 text-cyan-400">
+                  Early Stage
+                </div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="text-xs text-slate-400 flex items-center gap-3">
+                  <span>7 min read</span>
+                  <span>•</span>
+                  <span>November 2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors leading-snug">
+                  How to get your first 100 customers online
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  A step-by-step playbook for bootstrap founders: defining your core value proposition, cold outbound, and low-budget hyper-targeted Meta ads.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2">
+              <a href="#contact" class="text-xs font-semibold text-brand-glow hover:underline flex items-center gap-1">
+                <span>Read Article</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between motion-reveal delay-300">
+            <div>
+              <div class="h-48 overflow-hidden bg-slate-900 relative">
+                <img src="assets/full-stack-dev-service.png" 
+                     alt="Modern Tech Stacks for 2026" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute top-3 left-3 px-2 py-0.5 rounded text-[11px] font-mono bg-slate-950/80 text-purple-400">
+                  Engineering
+                </div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="text-xs text-slate-400 flex items-center gap-3">
+                  <span>6 min read</span>
+                  <span>•</span>
+                  <span>November 2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-brand-glow transition-colors leading-snug">
+                  Choosing the right tech stack for your 2026 web app
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  Why pairing Next.js with serverless microservices and automated security posture prevents costly rewrites as your customer base scales.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2">
+              <a href="#contact" class="text-xs font-semibold text-brand-glow hover:underline flex items-center gap-1">
+                <span>Read Article</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10 · CONTACT SECTION (Wireframe Section 10 - Let us talk about your project) -->
+    <!-- ========================================================================= -->
+    <section class="py-24 bg-surface-subtle/60 relative border-t border-white/5" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left Column: Direct Info & Map -->
+          <div class="lg:col-span-5 space-y-8 motion-reveal">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span>10 · CONTACT</span>
+              </div>
+              
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Let us talk about your project
+              </h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Have an idea, need software built, or want to supercharge your digital sales? Reach out directly or drop us a line below.
+              </p>
+            </div>
+
+            <!-- Hardcoded Contact Details -->
+            <div class="space-y-4 pt-2">
+              
+              <!-- Email Card -->
+              <a href="mailto:famtrix0@gmail.com" class="glass-card cta-hover-lift rounded-xl p-4 flex items-center gap-4 hover:border-brand-primary/50 group block">
+                <div class="p-3 rounded-lg bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition-colors">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-medium">Email Us Directly</div>
+                  <div class="text-base font-bold text-white font-mono group-hover:text-brand-glow transition-colors">
+                    famtrix0@gmail.com
+                  </div>
+                </div>
+              </a>
+
+              <!-- Phone / WhatsApp Card -->
+              <a href="https://wa.me/918317477430?text=Hi%20FAMTRIX%20team%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="glass-card cta-hover-lift rounded-xl p-4 flex items-center gap-4 hover:border-emerald-500/50 group block">
+                <div class="p-3 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition-colors">
+                  <i data-lucide="phone-call" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-medium">Phone / WhatsApp (Click to Chat)</div>
+                  <div class="text-base font-bold text-white font-mono group-hover:text-emerald-400 transition-colors">
+                    8317477430
+                  </div>
+                </div>
+              </a>
+
+              <!-- Location Card -->
+              <div class="glass-card rounded-xl p-4 flex items-center gap-4">
+                <div class="p-3 rounded-lg bg-indigo-500/10 text-indigo-400">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-medium">Location</div>
+                  <div class="text-base font-bold text-white">
+                    Mysuru, Karnataka, India
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Wireframe [MAP] Component -->
+            <div class="rounded-2xl overflow-hidden glass-card p-1 border border-white/10 shadow-lg">
+              <div class="h-56 sm:h-64 w-full rounded-xl overflow-hidden relative">
+                <iframe 
+                  title="FAMTRIX Mysuru Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124738.4539824203!2d76.56564906566418!3d12.31063544607755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf70381d572ef9%3A0x2b89e64f4684c83f!2sMysuru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-slate-950/85 backdrop-blur-md border border-white/10 text-xs font-medium text-slate-200 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Office visits by appointment in Mysuru</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="lg:col-span-7 motion-reveal delay-200">
+            <div class="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 shadow-2xl relative">
+              <div class="mb-6 space-y-1">
+                <h3 class="text-2xl font-bold text-white">Send Us a Direct Message</h3>
+                <p class="text-slate-400 text-sm">We typically respond within 2 to 4 business hours.</p>
+              </div>
+
+              <form id="contact-form" onsubmit="event.preventDefault(); handleContactSubmit();" class="space-y-5">
+                
+                <div>
+                  <label for="contact-name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Your Name <span class="text-red-400">*</span>
+                  </label>
+                  <input type="text" 
+                         id="contact-name" 
+                         required 
+                         placeholder="e.g. Rahul Sharma" 
+                         class="w-full px-4 py-3.5 rounded-xl bg-slate-950/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all" />
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Email Address <span class="text-red-400">*</span>
+                  </label>
+                  <input type="email" 
+                         id="contact-email" 
+                         required 
+                         placeholder="e.g. rahul@company.com" 
+                         class="w-full px-4 py-3.5 rounded-xl bg-slate-950/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all" />
+                </div>
+
+                <div>
+                  <label for="contact-service" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Service Needed <span class="text-red-400">*</span>
+                  </label>
+                  <select id="contact-service" 
+                          required 
+                          class="w-full px-4 py-3.5 rounded-xl bg-slate-950 border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="digital-marketing-software">Digital Marketing Software Suite</option>
+                    <option value="full-stack-development">Full-Stack Web & App Development</option>
+                    <option value="ai-automation">AI & Workflow Automation</option>
+                    <option value="cybersecurity">Cybersecurity Audit & Protection</option>
+                    <option value="graphic-design">Graphic Design & Brand Kit</option>
+                    <option value="student-training">Student Training / Internship</option>
+                    <option value="other">Other Inquiry / Consultation</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                    Your Message <span class="text-red-400">*</span>
+                  </label>
+                  <textarea id="contact-message" 
+                            rows="4" 
+                            required 
+                            placeholder="Tell us about your project goals, timeline, or requirements..." 
+                            class="w-full px-4 py-3.5 rounded-xl bg-slate-950/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all"></textarea>
+                </div>
+
+                <!-- Submit Button with Magic UI Shiny Effect -->
+                <button type="submit" 
+                        id="contact-submit-btn" 
+                        class="shiny-button cta-hover-lift w-full py-4 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-brand-primary to-brand-primary-deep shadow-glow-button flex items-center justify-center gap-2">
+                  <span>Send Message</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+
+                <div id="contact-status" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 11 · FOOTER (Wireframe Exact Layout) -->
+  <!-- ========================================================================= -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#" class="inline-block" aria-label="FAMTRIX Home">
+            <img src="assets/famtrix-logo.svg" alt="FAMTRIX Logo" class="h-10 w-auto" />
+          </a>
+          <p class="text-slate-300 text-sm max-w-sm">
+            Powered by Innovation. Driven by Technology.
+          </p>
+          <p class="text-xs text-slate-500 max-w-sm">
+            Providing high-impact technology solutions, custom web software, and AI automation for startups and businesses across Mysuru, Karnataka, and worldwide.
+          </p>
+          <div class="pt-2 text-xs space-y-1.5 font-mono">
+            <div>Email: <a href="mailto:famtrix0@gmail.com" class="text-slate-200 hover:text-brand-glow">famtrix0@gmail.com</a></div>
+            <div>Phone / WhatsApp: <a href="https://wa.me/918317477430" class="text-emerald-400 hover:underline">8317477430</a></div>
+            <div>Location: Mysuru, Karnataka, India</div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#proof" class="hover:text-white transition-colors">Case Studies</a></li>
+            <li><a href="#blog" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Solutions</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-white transition-colors">Marketing Software</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Full-Stack Web Apps</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">AI & Workflow Automation</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Cybersecurity Audits</a></li>
+            <li><a href="#who-we-help" class="hover:text-white transition-colors">Student Mentorship</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Connect</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1.5">
+                <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1.5">
+                <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-400"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/918317477430" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1.5 text-emerald-400">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>WhatsApp: 8317477430</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          © 2026 FAMTRIX. All rights reserved.
+        </div>
+        <div class="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-center sm:text-right">
+          <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <span>•</span>
+          <span>Made with pride in Mysuru</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick-Trigger Button -->
+  <a href="https://wa.me/918317477430?text=Hello%20FAMTRIX%2C%20I%20visited%20your%20website%20and%20want%20to%20know%20more." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Direct WhatsApp Chat with FAMTRIX" 
+     class="shiny-button cta-hover-lift fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-500 text-slate-950 shadow-glow-emerald flex items-center justify-center">
+    <i data-lucide="message-circle" class="w-6 h-6 fill-slate-950"></i>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- CLIENT INTERACTIVITY & MAGIC UI / MOTION PRIMITIVES SCRIPTS -->
+  <!-- ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 2. Magic UI: Magic Card Dynamic Spotlight Hover Effect
+    const magicCards = document.querySelectorAll('.magic-card');
+    magicCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--mouse-x', `-999px`);
+        card.style.setProperty('--mouse-y', `-999px`);
+      });
+    });
+
+    // 3. Motion Primitives: Scroll-Triggered Reveal / InView Observer
+    const revealElements = document.querySelectorAll('.motion-reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 4. Lead Magnet Download Handler
+    function handleLeadMagnet() {
+      const emailInput = document.getElementById('lead-email');
+      const leadBtn = document.getElementById('lead-btn');
+      const leadFeedback = document.getElementById('lead-feedback');
+      const userEmail = emailInput.value.trim();
+
+      if (!userEmail) return;
+
+      leadBtn.disabled = true;
+      leadBtn.innerHTML = '<span>Sending...</span>';
+
+      setTimeout(() => {
+        leadFeedback.innerHTML = `
+          <div class="text-emerald-400 font-semibold flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Success! The 25-point Marketing Checklist has been sent to <strong>${userEmail}</strong>.</span>
+          </div>
+        `;
+        lucide.createIcons();
+        leadBtn.innerHTML = '<span>Downloaded ✓</span>';
+        leadBtn.classList.replace('from-emerald-400', 'from-emerald-600');
+        leadBtn.classList.replace('to-teal-300', 'to-emerald-500');
+      }, 700);
+    }
+
+    // 5. Contact Form Submission Handler
+    function handleContactSubmit() {
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const service = document.getElementById('contact-service').value;
+      const message = document.getElementById('contact-message').value.trim();
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const statusBox = document.getElementById('contact-status');
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending Inquiry...</span>';
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Message Sent ✓</span>';
+        submitBtn.classList.replace('from-brand-primary', 'from-emerald-600');
+        submitBtn.classList.replace('to-brand-primary-deep', 'to-emerald-500');
+
+        statusBox.className = "p-4 rounded-xl text-sm font-medium bg-emerald-950/80 border border-emerald-500/40 text-emerald-300";
+        statusBox.innerHTML = `Thank you, <strong>${name}</strong>! Your inquiry regarding <em>${service}</em> has been received. Our team will contact you at <strong>${email}</strong> or on WhatsApp shortly.`;
+        statusBox.classList.remove('hidden');
+
+        console.log("Contact submission received:", { name, email, service, message });
+      }, 800);
+    }
+  </script>
+</body>
+</html>
