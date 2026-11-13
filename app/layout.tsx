@@ -15,9 +15,9 @@ const mono = JetBrains_Mono({
 });
 
 const siteUrl = 'https://www.famtrix.in';
-const siteTitle = 'FAMTRIX - Digital Marketing Software & Tech Solutions in Mysuru';
+const siteTitle = 'FAMTRIX | Digital Marketing Software & Web Development in Mysuru';
 const siteDescription =
-  'FAMTRIX provides digital marketing software, AI automation, and full-stack web development for startups and local businesses in Mysuru. Powered by Innovation.';
+  'FAMTRIX offers AI automation, web development, and digital marketing software for startups and local businesses in Mysuru. Get a free consultation today.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
-    'Digital marketing software',
-    'AI automation',
-    'Full-stack development',
-    'Cybersecurity',
-    'Mysuru tech agency',
+    'Digital marketing software Mysuru',
+    'Web development company Mysuru',
+    'AI automation services',
+    'Graphic design Mysuru',
+    'Cybersecurity solutions India',
+    'Tech solutions for startups',
+    'Full-stack development Mysuru',
     'Mysore software company',
-    'Startup MVP development',
-    'Web development Mysuru',
     'FAMTRIX',
   ],
   authors: [{ name: 'FAMTRIX', url: siteUrl }],
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/assets/hero-banner.png`,
         width: 1536,
         height: 1024,
-        alt: 'FAMTRIX - Digital Marketing Software & Tech Solutions in Mysuru',
+        alt: 'FAMTRIX | Digital Marketing Software & Web Development in Mysuru',
       },
     ],
     locale: 'en_IN',
@@ -99,7 +99,14 @@ const jsonLd = {
       logo: `${siteUrl}/assets/famtrix-logo.png`,
       email: 'contact@famtrix.in',
       telephone: '+91-8317477430',
-      description: 'Technology solutions and digital services.',
+      description: 'Technology solutions, web development, and digital marketing services.',
+      areaServed: 'Mysuru, Karnataka, India',
+      knowsAbout: [
+        'Digital Marketing',
+        'Web Development',
+        'AI Automation',
+        'Cybersecurity',
+      ],
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Mysuru',
@@ -121,8 +128,15 @@ const jsonLd = {
       image: `${siteUrl}/assets/hero-banner.png`,
       logo: `${siteUrl}/assets/famtrix-logo.png`,
       priceRange: '$$',
+      areaServed: 'Mysuru, Karnataka, India',
+      knowsAbout: [
+        'Digital Marketing',
+        'Web Development',
+        'AI Automation',
+        'Cybersecurity',
+      ],
       description:
-        'FAMTRIX provides digital marketing software, AI automation, and full-stack web development for startups and local businesses in Mysuru. Powered by Innovation.',
+        'FAMTRIX offers AI automation, web development, and digital marketing software for startups and local businesses in Mysuru. Get a free consultation today.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Mysuru',
@@ -155,13 +169,13 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${siteUrl}/#service-digital-marketing`,
-      name: 'Digital Marketing Software',
+      name: 'Digital Marketing Software for Startups',
       serviceType: 'Digital Marketing & Growth',
       provider: {
         '@id': `${siteUrl}/#localbusiness`,
       },
       description:
-        'Flagship growth suite. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI.',
+        'Flagship growth suite. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI in Mysuru.',
       areaServed: {
         '@type': 'City',
         name: 'Mysuru',
@@ -170,13 +184,13 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${siteUrl}/#service-ai-automation`,
-      name: 'AI & Automation',
+      name: 'AI & Automation Services for Businesses',
       serviceType: 'Artificial Intelligence & Workflow Automation',
       provider: {
         '@id': `${siteUrl}/#localbusiness`,
       },
       description:
-        'Intelligent workflow automation, AI agents, CRM sync, and operational efficiency tools tailored for modern businesses.',
+        'Intelligent workflow automation, AI agents, CRM sync, and operational efficiency tools tailored for modern businesses in Mysuru.',
       areaServed: {
         '@type': 'City',
         name: 'Mysuru',
@@ -185,13 +199,13 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${siteUrl}/#service-fullstack`,
-      name: 'Full-Stack Development',
+      name: 'Full-Stack Web Development in Mysuru',
       serviceType: 'Web & Software Engineering',
       provider: {
         '@id': `${siteUrl}/#localbusiness`,
       },
       description:
-        'Custom web applications, MVP development, scalable SaaS architectures, and cloud microservices built with Next.js.',
+        'Custom web applications, MVP development, scalable SaaS architectures, and cloud microservices built with Next.js by our Mysuru team.',
       areaServed: {
         '@type': 'City',
         name: 'Mysuru',
@@ -200,13 +214,13 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${siteUrl}/#service-cybersecurity`,
-      name: 'Cybersecurity',
+      name: 'Cybersecurity Solutions in India',
       serviceType: 'Information Security & Audits',
       provider: {
         '@id': `${siteUrl}/#localbusiness`,
       },
       description:
-        'Vulnerability assessments, code security audits, penetration testing, and hardened infrastructure protection.',
+        'Vulnerability assessments, code security audits, penetration testing, and hardened infrastructure protection for growing ventures.',
       areaServed: {
         '@type': 'City',
         name: 'Mysuru',

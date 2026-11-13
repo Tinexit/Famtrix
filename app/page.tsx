@@ -117,7 +117,7 @@ export default function HomePage() {
           <a href="#" className="flex items-center gap-3 group" aria-label="FAMTRIX Home">
             <Image
               src="/assets/famtrix-logo.png"
-              alt="FAMTRIX Techno Solutions logo"
+              alt="FAMTRIX - Web development company and digital marketing software Mysuru"
               width={694}
               height={211}
               className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
@@ -218,7 +218,7 @@ export default function HomePage() {
             <div className="absolute -bottom-[10%] left-[35%] w-[400px] h-[400px] rounded-full bg-blue-600/15 blur-[100px]"></div>
             <Image
               src="/assets/hero-bg-pattern.svg"
-              alt="FAMTRIX geometric mesh background pattern"
+              alt="FAMTRIX geometric tech mesh - Digital solutions in Mysuru"
               width={1440}
               height={900}
               className="w-full h-full object-cover opacity-50 mix-blend-screen"
@@ -290,7 +290,7 @@ export default function HomePage() {
                 <div className="relative rounded-2xl overflow-hidden glass-card p-2 shadow-2xl border border-white/15 hover:border-cyan-500/40 transition-colors duration-500">
                   <Image
                     src="/assets/hero-banner.png"
-                    alt="FAMTRIX digital marketing software, web engineering, and AI automation dashboard"
+                    alt="FAMTRIX digital marketing software Mysuru and AI automation services dashboard"
                     width={1536}
                     height={1024}
                     className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.015]"
@@ -354,7 +354,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="FAMTRIX Digital Marketing Software Suite and multi-channel campaign analytics"
+                      alt="Digital marketing software Mysuru - FAMTRIX campaign manager and SEO analytics for startups"
                       width={1536}
                       height={1024}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -364,10 +364,10 @@ export default function HomePage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
-                    Digital Marketing
+                    Digital Marketing Software for Startups
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Flagship growth strategies. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI.
+                    Drive high-intent local customer traffic with our digital marketing software in Mysuru built for startups and growing enterprises. Easily manage multi-channel campaigns, automate SEO rankings, and capture conversion-ready sales leads.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -388,7 +388,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/ai-automation-service.png"
-                      alt="FAMTRIX AI and Workflow Automation systems"
+                      alt="AI automation services and workflow tools for businesses by FAMTRIX Mysuru"
                       width={504}
                       height={496}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -398,10 +398,10 @@ export default function HomePage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
-                    AI & Automation
+                    AI & Automation Services for Businesses
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Save hours of manual effort by automating repetitive customer support, billing, social publishing, and internal workflows.
+                    Transform your operations with custom AI automation services tailored for Mysuru businesses and modern tech ventures. Eliminate repetitive manual tasks through automated customer support, instant WhatsApp response flows, and seamless CRM integrations.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -422,7 +422,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/full-stack-dev-service.png"
-                      alt="Full-Stack Web Development, Next.js applications, and custom cloud architecture"
+                      alt="Web development company Mysuru - Full-stack Next.js web applications and custom software"
                       width={503}
                       height={509}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -432,10 +432,10 @@ export default function HomePage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
-                    Full-Stack Development
+                    Full-Stack Web Development in Mysuru
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    High-performance websites, custom SaaS platforms, and mobile apps built to your exact specifications using React, Next.js, and Node.
+                    Accelerate your digital growth with a premier web development company in Mysuru building high-performance Next.js web applications, custom SaaS platforms, and MVP solutions. We engineer fast, responsive websites optimized to convert local and global traffic into paying customers.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -456,7 +456,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/cybersecurity-service.png"
-                      alt="Cybersecurity audits, SSL certification, and cloud database encryption"
+                      alt="Cybersecurity solutions India and cloud data protection for startups by FAMTRIX"
                       width={503}
                       height={496}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -466,10 +466,10 @@ export default function HomePage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white group-hover:text-brand-glow transition-colors">
-                    Cybersecurity
+                    Cybersecurity Solutions in India
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Protect your site, customer data, and payments with bulletproof audits, SSL certification, DDoS defense, and database encryption.
+                    Protect your web applications, confidential client data, and digital infrastructure with trusted cybersecurity solutions in India. We conduct thorough vulnerability audits, SSL implementations, database encryption, and DDoS defense to keep Mysuru businesses resilient against threats.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -487,7 +487,7 @@ export default function HomePage() {
                 <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
                   <Sparkles className="w-5 h-5" />
                 </span>
-                <span>Also offering <strong>Graphic Design & Brand Kits</strong> (logos, social creatives, pitch decks) and <strong>Omnichannel SEO</strong>.</span>
+                <span>Also offering creative <strong>Graphic Design in Mysuru</strong> (logos, brand kits, pitch decks) and <strong>Omnichannel SEO</strong>.</span>
               </div>
               <a href="#contact" className="text-brand-glow hover:underline font-semibold whitespace-nowrap">Inquire About Custom Bundles &rarr;</a>
             </div>
@@ -506,7 +506,7 @@ export default function HomePage() {
                 <div className="glass-card rounded-2xl p-2 relative shadow-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-500">
                   <Image
                     src="/assets/featured-product-showcase.png"
-                    alt="FAMTRIX Digital Marketing Software Suite interactive live analytics dashboard demo"
+                    alt="FAMTRIX digital marketing software Mysuru - Live interactive marketing dashboard for local business growth"
                     width={1672}
                     height={941}
                     className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-102"
@@ -607,7 +607,7 @@ export default function HomePage() {
                   <div className="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
                     <Image
                       src="/assets/who-we-help-startups.png"
-                      alt="Fast MVP product engineering and scalable cloud solutions for startups"
+                      alt="Tech solutions for startups - Fast MVP engineering by FAMTRIX Mysuru"
                       width={524}
                       height={633}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -639,7 +639,7 @@ export default function HomePage() {
                   <div className="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
                     <Image
                       src="/assets/who-we-help-businesses.png"
-                      alt="Google Maps SEO and WhatsApp order integration for Mysuru local businesses"
+                      alt="Web development company Mysuru and local business marketing solutions"
                       width={522}
                       height={633}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -671,7 +671,7 @@ export default function HomePage() {
                   <div className="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
                     <Image
                       src="/assets/who-we-help-students.png"
-                      alt="Hands-on software development internships and project mentorship for students"
+                      alt="Full-stack web development and AI automation training programs in Mysuru"
                       width={522}
                       height={633}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -725,7 +725,7 @@ export default function HomePage() {
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
                   <Image
                     src="/assets/why-mysuru-based.png"
-                    alt="Local, Mysuru-based FAMTRIX engineering team"
+                    alt="FAMTRIX web development company Mysuru engineering team"
                     width={452}
                     height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -746,7 +746,7 @@ export default function HomePage() {
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
                   <Image
                     src="/assets/why-one-team.png"
-                    alt="One team for software development, UI/UX design, and digital marketing"
+                    alt="Graphic design Mysuru and digital marketing software integrated team"
                     width={452}
                     height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -767,7 +767,7 @@ export default function HomePage() {
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
                   <Image
                     src="/assets/why-budget-friendly.png"
-                    alt="Affordable pricing that fits early stage startup budgets"
+                    alt="Affordable tech solutions for startups and Mysuru local businesses"
                     width={453}
                     height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -788,7 +788,7 @@ export default function HomePage() {
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
                   <Image
                     src="/assets/why-flexible-collaboration.png"
-                    alt="Work remotely or in person with FAMTRIX"
+                    alt="Web development company Mysuru offering in-person and remote collaboration"
                     width={452}
                     height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -923,7 +923,7 @@ export default function HomePage() {
                   <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
                     <Image
                       src="/assets/approach-ccdc-framework.png"
-                      alt="The FAMTRIX CCDC Framework: Creating Value, Creating Quality, Delivering Value with Quality, and Capturing Highlights"
+                      alt="The FAMTRIX CCDC Framework - AI automation services and web development methodology"
                       width={1672}
                       height={941}
                       className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-102"
@@ -941,7 +941,7 @@ export default function HomePage() {
                 <div className="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
                   <Image
                     src="/assets/digital-marketing-service.png"
-                    alt="Mysuru Heritage Silk Store retail growth case study showing 310% lead increase"
+                    alt="Digital marketing software Mysuru case study: 310% lead increase for retail business"
                     width={1536}
                     height={1024}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -964,7 +964,7 @@ export default function HomePage() {
                 <div className="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
                   <Image
                     src="/assets/full-stack-dev-service.png"
-                    alt="EduMatrix EdTech platform case study serving over 12,000 active students"
+                    alt="Web development company Mysuru case study: EduMatrix platform serving 12,000+ students"
                     width={503}
                     height={509}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -987,7 +987,7 @@ export default function HomePage() {
                 <div className="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
                   <Image
                     src="/assets/ai-automation-service.png"
-                    alt="Karnataka Agri-Supply Chain logistics automation reducing manual processing by 85%"
+                    alt="AI automation services case study: 85% manual time saved for Karnataka supply chain"
                     width={504}
                     height={496}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1218,7 +1218,7 @@ export default function HomePage() {
                 <div className="glass-card rounded-2xl p-2 relative shadow-2xl border border-white/10 overflow-hidden hover:border-emerald-500/40 transition-colors duration-500">
                   <Image
                     src="/assets/founder-afrid.jpg"
-                    alt="Afrid - Founder & Lead Developer at FAMTRIX"
+                    alt="Afrid - Founder & Lead Developer at FAMTRIX - Web development company Mysuru"
                     width={720}
                     height={720}
                     className="w-full h-80 sm:h-96 object-cover object-top rounded-xl"
@@ -1314,7 +1314,7 @@ export default function HomePage() {
                   <div className="h-48 overflow-hidden bg-slate-900 relative">
                     <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="Digital marketing strategies and local SEO guide for Mysuru businesses"
+                      alt="Digital marketing software Mysuru tips and local SEO growth guide"
                       width={1536}
                       height={1024}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1350,7 +1350,7 @@ export default function HomePage() {
                   <div className="h-48 overflow-hidden bg-slate-900 relative">
                     <Image
                       src="/assets/featured-product-showcase.png"
-                      alt="Customer acquisition playbook: How to get your first 100 customers online"
+                      alt="Tech solutions for startups - Customer acquisition and digital growth guide"
                       width={1672}
                       height={941}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1386,7 +1386,7 @@ export default function HomePage() {
                   <div className="h-48 overflow-hidden bg-slate-900 relative">
                     <Image
                       src="/assets/full-stack-dev-service.png"
-                      alt="Choosing the right modern tech stack and Next.js for web applications in 2026"
+                      alt="Web development company Mysuru insights on modern Next.js tech stacks for 2026"
                       width={503}
                       height={509}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1661,7 +1661,7 @@ export default function HomePage() {
               <a href="#" className="inline-block" aria-label="FAMTRIX Home">
                 <Image
                   src="/assets/famtrix-logo.png"
-                  alt="FAMTRIX Techno Solutions logo"
+                  alt="FAMTRIX - Digital marketing software & web development company Mysuru"
                   width={694}
                   height={211}
                   className="h-10 sm:h-12 w-auto object-contain"

@@ -64,7 +64,7 @@ export default function ChecklistLandingPage() {
         <div className="absolute top-[40%] -right-[10%] w-[550px] h-[550px] rounded-full bg-cyan-500/15 blur-[140px]"></div>
         <Image
           src="/assets/hero-bg-pattern.svg"
-          alt="FAMTRIX background graphic pattern"
+          alt="FAMTRIX background graphic pattern - Tech solutions for startups in Mysuru"
           width={1440}
           height={900}
           className="w-full h-full object-cover opacity-50 mix-blend-screen"
@@ -78,7 +78,7 @@ export default function ChecklistLandingPage() {
           <Link href="/" className="flex items-center gap-3 group" title="Return to FAMTRIX Homepage">
             <Image
               src="/assets/famtrix-logo.png"
-              alt="FAMTRIX Techno Solutions logo"
+              alt="FAMTRIX Techno Solutions logo - Web development company Mysuru"
               width={694}
               height={211}
               className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
@@ -171,7 +171,7 @@ export default function ChecklistLandingPage() {
                   <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-slate-950/80 shadow-2xl group">
                     <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="FAMTRIX marketing checklist dashboard showing analytics and growth strategy"
+                      alt="FAMTRIX digital marketing software dashboard and growth checklist for Mysuru businesses"
                       width={1536}
                       height={1024}
                       className="w-full h-44 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-105"
