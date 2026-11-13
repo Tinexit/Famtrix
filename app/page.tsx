@@ -354,7 +354,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="Digital marketing software Mysuru - FAMTRIX campaign manager and SEO analytics for startups"
+                      alt="Digital marketing services and performance marketing agency software for startups"
                       width={1536}
                       height={1024}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -367,7 +367,7 @@ export default function HomePage() {
                     Digital Marketing Software for Startups
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Drive high-intent local customer traffic with our digital marketing software in Mysuru built for startups and growing enterprises. Easily manage multi-channel campaigns, automate SEO rankings, and capture conversion-ready sales leads.
+                    As a results-driven performance marketing agency, we provide high-impact digital marketing services and growth software for startups. Scale customer reach with automated SEO, multi-channel campaign analytics, and conversion-ready lead generation.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -388,7 +388,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/ai-automation-service.png"
-                      alt="AI automation services and workflow tools for businesses by FAMTRIX Mysuru"
+                      alt="AI automation agency delivering AI workflow automation for businesses"
                       width={504}
                       height={496}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -401,7 +401,7 @@ export default function HomePage() {
                     AI & Automation Services for Businesses
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Transform your operations with custom AI automation services tailored for Mysuru businesses and modern tech ventures. Eliminate repetitive manual tasks through automated customer support, instant WhatsApp response flows, and seamless CRM integrations.
+                    As an innovative AI automation agency, we deliver tailored AI workflow automation to eliminate repetitive operational bottlenecks. Accelerate business productivity with intelligent customer support bots, automated CRM sync, and instant WhatsApp response flows.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -422,7 +422,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/full-stack-dev-service.png"
-                      alt="Web development company Mysuru - Full-stack Next.js web applications and custom software"
+                      alt="Full stack development company specializing in custom web app development"
                       width={503}
                       height={509}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -435,7 +435,7 @@ export default function HomePage() {
                     Full-Stack Web Development in Mysuru
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Accelerate your digital growth with a premier web development company in Mysuru building high-performance Next.js web applications, custom SaaS platforms, and MVP solutions. We engineer fast, responsive websites optimized to convert local and global traffic into paying customers.
+                    Partner with an experienced full stack development company specializing in custom web app development, scalable SaaS platforms, and MVP engineering. We deliver high-performance Next.js applications engineered to turn digital traffic into loyal clients.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -456,7 +456,7 @@ export default function HomePage() {
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
                     <Image
                       src="/assets/cybersecurity-service.png"
-                      alt="Cybersecurity solutions India and cloud data protection for startups by FAMTRIX"
+                      alt="Cybersecurity solutions and network security services by FAMTRIX"
                       width={503}
                       height={496}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -469,7 +469,7 @@ export default function HomePage() {
                     Cybersecurity Solutions in India
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Protect your web applications, confidential client data, and digital infrastructure with trusted cybersecurity solutions in India. We conduct thorough vulnerability audits, SSL implementations, database encryption, and DDoS defense to keep Mysuru businesses resilient against threats.
+                    Protect your web applications and digital infrastructure with trusted cybersecurity solutions and proactive network security services. We conduct vulnerability assessments, SSL encryption, database hardening, and DDoS mitigation to defend your enterprise.
                   </p>
                 </div>
                 <div className="pt-6 mt-4 border-t border-white/5 relative z-10">
@@ -484,10 +484,18 @@ export default function HomePage() {
 
             <div className="mt-8 p-4 rounded-xl bg-slate-900/50 border border-white/5 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-300 gap-4 motion-reveal">
               <div className="flex items-center gap-3">
-                <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
-                  <Sparkles className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-lg overflow-hidden bg-slate-900 border border-white/10 shrink-0">
+                  <Image
+                    src="/assets/graphic-design-service.png"
+                    alt="Graphic design services and brand identity design"
+                    width={505}
+                    height={509}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span>
+                  Elevate your visual presence with creative <strong>graphic design services</strong> and complete <strong>brand identity design</strong> (logos, brand kits, pitch decks) built for high-growth ventures.
                 </span>
-                <span>Also offering creative <strong>Graphic Design in Mysuru</strong> (logos, brand kits, pitch decks) and <strong>Omnichannel SEO</strong>.</span>
               </div>
               <a href="#contact" className="text-brand-glow hover:underline font-semibold whitespace-nowrap">Inquire About Custom Bundles &rarr;</a>
             </div>

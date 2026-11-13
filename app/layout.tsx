@@ -17,7 +17,7 @@ const mono = JetBrains_Mono({
 const siteUrl = 'https://www.famtrix.in';
 const siteTitle = 'FAMTRIX | Digital Marketing Software & Web Development in Mysuru';
 const siteDescription =
-  'FAMTRIX offers AI automation, web development, and digital marketing software for startups and local businesses in Mysuru. Get a free consultation today.';
+  'FAMTRIX is a full stack development company and AI automation agency providing digital marketing services and cybersecurity solutions for startups and growing businesses.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,6 +36,16 @@ export const metadata: Metadata = {
     'Full-stack development Mysuru',
     'Mysore software company',
     'FAMTRIX',
+    'digital marketing services',
+    'performance marketing agency',
+    'full stack development company',
+    'custom web app development',
+    'AI automation agency',
+    'AI workflow automation',
+    'graphic design services',
+    'brand identity design',
+    'cybersecurity solutions',
+    'network security services',
   ],
   authors: [{ name: 'FAMTRIX', url: siteUrl }],
   creator: 'FAMTRIX',
@@ -103,8 +113,9 @@ const jsonLd = {
       areaServed: 'Mysuru, Karnataka, India',
       knowsAbout: [
         'Digital Marketing',
-        'Web Development',
+        'Full Stack Development',
         'AI Automation',
+        'Graphic Design',
         'Cybersecurity',
       ],
       address: {
@@ -131,12 +142,13 @@ const jsonLd = {
       areaServed: 'Mysuru, Karnataka, India',
       knowsAbout: [
         'Digital Marketing',
-        'Web Development',
+        'Full Stack Development',
         'AI Automation',
+        'Graphic Design',
         'Cybersecurity',
       ],
       description:
-        'FAMTRIX offers AI automation, web development, and digital marketing software for startups and local businesses in Mysuru. Get a free consultation today.',
+        'FAMTRIX is a full stack development company and AI automation agency providing digital marketing services and cybersecurity solutions for startups and growing businesses.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Mysuru',
@@ -221,6 +233,21 @@ const jsonLd = {
       },
       description:
         'Vulnerability assessments, code security audits, penetration testing, and hardened infrastructure protection for growing ventures.',
+      areaServed: {
+        '@type': 'City',
+        name: 'Mysuru',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${siteUrl}/#service-graphic-design`,
+      name: 'Graphic Design Services & Brand Identity Design',
+      serviceType: 'Graphic Design & Brand Identity',
+      provider: {
+        '@id': `${siteUrl}/#localbusiness`,
+      },
+      description:
+        'Professional graphic design services, brand identity design, logo design, visual branding, and pitch deck presentations.',
       areaServed: {
         '@type': 'City',
         name: 'Mysuru',
