@@ -1406,14 +1406,14 @@ export default function HomePage() {
 
                 <div className="space-y-4 pt-2">
                   
-                  <a href="mailto:famtrix0@gmail.com" className="glass-card cta-hover-lift rounded-xl p-4 flex items-center gap-4 hover:border-brand-primary/50 group block">
+                  <a href="mailto:contact@famtrix.in" className="glass-card cta-hover-lift rounded-xl p-4 flex items-center gap-4 hover:border-brand-primary/50 group block">
                     <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition-colors">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
                       <div className="text-xs text-slate-400 font-medium">Email Us Directly</div>
                       <div className="text-base font-bold text-white font-mono group-hover:text-brand-glow transition-colors">
-                        famtrix0@gmail.com
+                        contact@famtrix.in
                       </div>
                     </div>
                   </a>
@@ -1617,7 +1617,7 @@ export default function HomePage() {
               </p>
               
               <div className="pt-2 text-xs space-y-1.5 font-mono">
-                <div>Email: <a href="mailto:famtrix0@gmail.com" className="text-slate-200 hover:text-brand-glow">famtrix0@gmail.com</a></div>
+                <div>Email: <a href="mailto:contact@famtrix.in" className="text-slate-200 hover:text-brand-glow">contact@famtrix.in</a></div>
                 <div>Phone / WhatsApp: <a href="https://wa.me/918317477430" className="text-emerald-400 hover:underline">8317477430</a></div>
                 <div>Location: Mysuru, Karnataka, India</div>
               </div>

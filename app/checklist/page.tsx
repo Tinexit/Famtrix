@@ -306,7 +306,7 @@ export default function ChecklistLandingPage() {
             © 2026 FAMTRIX. All rights reserved. • Built with pride in Mysuru, India.
           </div>
           <div className="flex items-center gap-4 text-slate-400">
-            <span>Email: <a href="mailto:famtrix0@gmail.com" className="hover:text-white">famtrix0@gmail.com</a></span>
+            <span>Email: <a href="mailto:contact@famtrix.in" className="hover:text-white">contact@famtrix.in</a></span>
             <span>•</span>
             <span>WhatsApp: <a href="https://wa.me/918317477430" className="hover:text-emerald-400">8317477430</a></span>
           </div>
