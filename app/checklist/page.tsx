@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import {
   Sparkles,
@@ -61,16 +62,28 @@ export default function ChecklistLandingPage() {
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute -top-[15%] left-[20%] w-[600px] h-[600px] rounded-full bg-emerald-500/15 blur-[140px]"></div>
         <div className="absolute top-[40%] -right-[10%] w-[550px] h-[550px] rounded-full bg-cyan-500/15 blur-[140px]"></div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/assets/hero-bg-pattern.svg" alt="" className="w-full h-full object-cover opacity-50 mix-blend-screen" />
+        <Image
+          src="/assets/hero-bg-pattern.svg"
+          alt="FAMTRIX background graphic pattern"
+          width={1440}
+          height={900}
+          className="w-full h-full object-cover opacity-50 mix-blend-screen"
+          priority
+        />
       </div>
 
       {/* Minimal Header (No full nav links) */}
       <header className="w-full py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group" title="Return to FAMTRIX Homepage">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/famtrix-logo.png" alt="FAMTRIX Techno Solutions" className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            <Image
+              src="/assets/famtrix-logo.png"
+              alt="FAMTRIX Techno Solutions logo"
+              width={694}
+              height={211}
+              className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           <Link href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-400 hover:text-white transition-colors group">
@@ -156,10 +169,11 @@ export default function ChecklistLandingPage() {
                 {/* Right Column: Visual Preview & Form */}
                 <div className="lg:col-span-5 space-y-6">
                   <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-slate-950/80 shadow-2xl group">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="FAMTRIX Marketing Checklist Preview"
+                      alt="FAMTRIX marketing checklist dashboard showing analytics and growth strategy"
+                      width={1536}
+                      height={1024}
                       className="w-full h-44 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>

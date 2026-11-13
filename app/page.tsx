@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   MessageCircle,
   ArrowRight,
@@ -114,11 +115,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           
           <a href="#" className="flex items-center gap-3 group" aria-label="FAMTRIX Home">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/assets/famtrix-logo.png"
-              alt="FAMTRIX Techno Solutions"
+              alt="FAMTRIX Techno Solutions logo"
+              width={694}
+              height={211}
               className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              priority
             />
           </a>
 
@@ -213,8 +216,14 @@ export default function HomePage() {
             <div className="absolute -top-[10%] left-[15%] w-[500px] h-[500px] rounded-full bg-cyan-500/15 blur-[120px] animate-pulse-subtle"></div>
             <div className="absolute top-[30%] -right-[5%] w-[450px] h-[450px] rounded-full bg-emerald-500/12 blur-[130px] animate-pulse-subtle" style={{ animationDelay: '2s' }}></div>
             <div className="absolute -bottom-[10%] left-[35%] w-[400px] h-[400px] rounded-full bg-blue-600/15 blur-[100px]"></div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/hero-bg-pattern.svg" alt="" className="w-full h-full object-cover opacity-50 mix-blend-screen" />
+            <Image
+              src="/assets/hero-bg-pattern.svg"
+              alt="FAMTRIX geometric mesh background pattern"
+              width={1440}
+              height={900}
+              className="w-full h-full object-cover opacity-50 mix-blend-screen"
+              priority
+            />
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -260,30 +269,32 @@ export default function HomePage() {
                 <div className="pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
                   <div className="p-2 rounded-xl bg-slate-900/40 border border-white/5">
                     <div className="text-2xl sm:text-3xl font-bold font-mono text-white">5+</div>
-                    <div className="text-xs text-slate-400 font-medium">Happy Clients</div>
+                    <div className="text-xs text-slate-400 font-medium">Early Adopters</div>
                   </div>
                   <div className="p-2 rounded-xl bg-slate-900/40 border border-white/5">
-                    <div className="text-2xl sm:text-3xl font-bold font-mono text-brand-secondary">7+</div>
-                    <div className="text-xs text-slate-400 font-medium">Projects Delivered</div>
+                    <div className="text-2xl sm:text-3xl font-bold font-mono text-brand-secondary">2+</div>
+                    <div className="text-xs text-slate-400 font-medium">Projects in Development</div>
                   </div>
                   <div className="p-2 rounded-xl bg-slate-900/40 border border-white/5">
                     <div className="text-2xl sm:text-3xl font-bold font-mono text-brand-primary">100%</div>
-                    <div className="text-xs text-slate-400 font-medium">Secured</div>
+                    <div className="text-xs text-slate-400 font-medium">Client Focus</div>
                   </div>
                   <div className="p-2 rounded-xl bg-slate-900/40 border border-white/5">
-                    <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400">98%</div>
-                    <div className="text-xs text-slate-400 font-medium">Client Satisfaction</div>
+                    <div className="text-xl sm:text-2xl font-bold font-mono text-emerald-400 pt-0.5">Active</div>
+                    <div className="text-xs text-slate-400 font-medium">Early-Stage Startup</div>
                   </div>
                 </div>
               </div>
 
               <div className="lg:col-span-5 relative group motion-reveal delay-200">
                 <div className="relative rounded-2xl overflow-hidden glass-card p-2 shadow-2xl border border-white/15 hover:border-cyan-500/40 transition-colors duration-500">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/hero-banner.png"
-                    alt="FAMTRIX Digital Solutions Hero Banner"
+                    alt="FAMTRIX digital marketing software, web engineering, and AI automation dashboard"
+                    width={1536}
+                    height={1024}
                     className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.015]"
+                    priority
                   />
                   <div className="absolute bottom-6 left-6 right-6 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2">
@@ -341,10 +352,11 @@ export default function HomePage() {
               >
                 <div className="space-y-4 relative z-10">
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="Digital Marketing"
+                      alt="FAMTRIX Digital Marketing Software Suite and multi-channel campaign analytics"
+                      width={1536}
+                      height={1024}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500/90 text-slate-950 tracking-wide uppercase">
@@ -374,10 +386,11 @@ export default function HomePage() {
               >
                 <div className="space-y-4 relative z-10">
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/ai-automation-service.png"
-                      alt="AI & Automation"
+                      alt="FAMTRIX AI and Workflow Automation systems"
+                      width={504}
+                      height={496}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-cyan-500/90 text-slate-950 tracking-wide uppercase">
@@ -407,10 +420,11 @@ export default function HomePage() {
               >
                 <div className="space-y-4 relative z-10">
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/full-stack-dev-service.png"
-                      alt="Full-Stack Development"
+                      alt="Full-Stack Web Development, Next.js applications, and custom cloud architecture"
+                      width={503}
+                      height={509}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-500/90 text-white tracking-wide uppercase">
@@ -440,10 +454,11 @@ export default function HomePage() {
               >
                 <div className="space-y-4 relative z-10">
                   <div className="h-44 rounded-xl overflow-hidden bg-slate-900/80 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/cybersecurity-service.png"
-                      alt="Cybersecurity"
+                      alt="Cybersecurity audits, SSL certification, and cloud database encryption"
+                      width={503}
+                      height={496}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-purple-500/90 text-white tracking-wide uppercase">
@@ -489,25 +504,26 @@ export default function HomePage() {
               
               <div className="lg:col-span-6 relative group motion-reveal">
                 <div className="glass-card rounded-2xl p-2 relative shadow-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-500">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/featured-product-showcase.png"
-                    alt="FAMTRIX Digital Marketing Software Suite Demo"
+                    alt="FAMTRIX Digital Marketing Software Suite interactive live analytics dashboard demo"
+                    width={1672}
+                    height={941}
                     className="w-full h-auto rounded-xl object-cover transition-transform duration-700 group-hover:scale-102"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
                   <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between text-xs text-slate-300">
                     <span className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Live Interactive Dashboard
+                      <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Preview Interface
                     </span>
-                    <span className="font-mono text-emerald-400 font-medium">v2.4 Ready</span>
+                    <span className="font-mono text-cyan-400 font-medium">Currently in Development</span>
                   </div>
                 </div>
               </div>
 
               <div className="lg:col-span-6 space-y-6 motion-reveal delay-200">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  <span>3 · FEATURED PRODUCT</span>
+                  <span>3 · FEATURED PRODUCT · COMING SOON</span>
                 </div>
 
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
@@ -515,7 +531,7 @@ export default function HomePage() {
                 </h2>
 
                 <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                  Designed specifically for growing companies, local retail, and digital startups. Stop juggling 5 disconnected tools—run your social media, customer conversions, and local ad campaigns from a single unified hub.
+                  Designed specifically for growing companies, local retail, and digital startups. Stop juggling disconnected tools—plan and manage customer conversions and local marketing from a unified hub.
                 </p>
 
                 <ul className="space-y-4 pt-2">
@@ -524,8 +540,8 @@ export default function HomePage() {
                       <Check className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold text-base">[Feature 1] Multi-Platform Campaign Automation</h4>
-                      <p className="text-slate-400 text-sm">Schedule, publish, and track social campaigns across Instagram, Google, and Meta with automated optimization.</p>
+                      <h4 className="text-white font-semibold text-base">[Upcoming Feature] Multi-Platform Campaign Planning</h4>
+                      <p className="text-slate-400 text-sm">Designed to schedule and coordinate social campaigns across Instagram, Google, and Meta with organized workflows.</p>
                     </div>
                   </li>
 
@@ -534,8 +550,8 @@ export default function HomePage() {
                       <Check className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold text-base">[Feature 2] Instant WhatsApp & Local Lead Sync</h4>
-                      <p className="text-slate-400 text-sm">Capture customer inquiries from your site and forward them immediately to your WhatsApp (8317477430) for zero lead drop-off.</p>
+                      <h4 className="text-white font-semibold text-base">[Upcoming Feature] Instant WhatsApp & Local Lead Sync</h4>
+                      <p className="text-slate-400 text-sm">Route prospective customer inquiries directly to WhatsApp for prompt communication and follow-up.</p>
                     </div>
                   </li>
 
@@ -544,8 +560,8 @@ export default function HomePage() {
                       <Check className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold text-base">[Feature 3] Real-time ROI & Customer Analytics</h4>
-                      <p className="text-slate-400 text-sm">Simple, jargon-free dashboards showing exactly how many clicks, calls, and orders your marketing generated this week.</p>
+                      <h4 className="text-white font-semibold text-base">[Upcoming Feature] Transparent Growth & Customer Analytics</h4>
+                      <p className="text-slate-400 text-sm">Clean, jargon-free overviews tracking digital engagement, reach, and inbound customer interest.</p>
                     </div>
                   </li>
                 </ul>
@@ -555,8 +571,8 @@ export default function HomePage() {
                     href="#contact"
                     className="shiny-button cta-hover-lift inline-flex items-center justify-center px-8 py-3.5 rounded-full text-base font-semibold text-white bg-slate-900 border border-brand-primary/50 hover:bg-brand-primary hover:border-brand-primary"
                   >
-                    <span>Book a Demo</span>
-                    <Calendar className="w-4 h-4 ml-2" />
+                    <span>Join Waitlist</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               </div>
@@ -589,10 +605,11 @@ export default function HomePage() {
               <div className="glass-card rounded-2xl p-7 flex flex-col justify-between group motion-reveal delay-100">
                 <div className="space-y-4">
                   <div className="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/who-we-help-startups.png"
-                      alt="Startups Solution by FAMTRIX"
+                      alt="Fast MVP product engineering and scalable cloud solutions for startups"
+                      width={524}
+                      height={633}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -620,10 +637,11 @@ export default function HomePage() {
               <div className="glass-card rounded-2xl p-7 flex flex-col justify-between group motion-reveal delay-200">
                 <div className="space-y-4">
                   <div className="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/who-we-help-businesses.png"
-                      alt="Local Businesses Solution by FAMTRIX"
+                      alt="Google Maps SEO and WhatsApp order integration for Mysuru local businesses"
+                      width={522}
+                      height={633}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -651,10 +669,11 @@ export default function HomePage() {
               <div className="glass-card rounded-2xl p-7 flex flex-col justify-between group motion-reveal delay-300">
                 <div className="space-y-4">
                   <div className="h-48 rounded-xl overflow-hidden bg-slate-900/60 border border-white/5 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/who-we-help-students.png"
-                      alt="Students Programs by FAMTRIX"
+                      alt="Hands-on software development internships and project mentorship for students"
+                      width={522}
+                      height={633}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -663,10 +682,10 @@ export default function HomePage() {
                     <span className="px-2.5 py-0.5 rounded-full text-xs font-mono bg-indigo-500/20 text-indigo-300">Skill Development</span>
                   </div>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    <strong>Training, projects or internships:</strong> Hands-on mentorship from working engineers. Build production-grade code, ship real apps, and gain certified industry credentials.
+                    <strong>Training & project mentorship:</strong> Hands-on mentorship from working engineers. Build production-grade code, ship real apps, and gain practical training programs.
                   </p>
                   <ul className="text-xs text-slate-400 space-y-2 pt-2">
-                    <li className="flex items-center gap-2"><Award className="w-3.5 h-3.5 text-indigo-400" /> Real client projects & internships</li>
+                    <li className="flex items-center gap-2"><Award className="w-3.5 h-3.5 text-indigo-400" /> Project-based learning opportunities</li>
                     <li className="flex items-center gap-2"><Award className="w-3.5 h-3.5 text-indigo-400" /> Full-stack, AI & digital marketing tracks</li>
                   </ul>
                 </div>
@@ -704,10 +723,11 @@ export default function HomePage() {
               
               <div className="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-100">
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/why-mysuru-based.png"
-                    alt="Local, Mysuru-based FAMTRIX team"
+                    alt="Local, Mysuru-based FAMTRIX engineering team"
+                    width={452}
+                    height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -724,10 +744,11 @@ export default function HomePage() {
 
               <div className="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-200">
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/why-one-team.png"
-                    alt="One team for software, design, and marketing"
+                    alt="One team for software development, UI/UX design, and digital marketing"
+                    width={452}
+                    height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -744,10 +765,11 @@ export default function HomePage() {
 
               <div className="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-300">
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/why-budget-friendly.png"
-                    alt="Affordable pricing that fits early budgets"
+                    alt="Affordable pricing that fits early stage startup budgets"
+                    width={453}
+                    height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -764,10 +786,11 @@ export default function HomePage() {
 
               <div className="glass-card rounded-2xl p-6 space-y-4 group motion-reveal delay-400">
                 <div className="h-32 rounded-xl overflow-hidden bg-slate-900 border border-white/5">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/why-flexible-collaboration.png"
-                    alt="Work remotely or in person"
+                    alt="Work remotely or in person with FAMTRIX"
+                    width={452}
+                    height={315}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -881,7 +904,7 @@ export default function HomePage() {
                     <div className="ccdc-card p-4 rounded-xl bg-slate-900/80 border border-emerald-500/20 group cursor-pointer">
                       <div className="flex items-center gap-2.5 mb-1.5">
                         <span className="flex items-center justify-center w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-300 font-mono font-bold text-xs">D</span>
-                        <div className="text-xs font-bold text-emerald-300 uppercase tracking-wider">Stage 3: Delivering Value</div>
+                        <div className="text-xs font-bold text-emerald-300 uppercase tracking-wider">Stage 3: Delivering Value with Quality</div>
                       </div>
                       <div className="text-xs text-slate-300 leading-relaxed">Turn concepts into impactful applications and conversion engines that drive real business growth.</div>
                     </div>
@@ -898,10 +921,11 @@ export default function HomePage() {
 
                 <div className="lg:col-span-6">
                   <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/approach-ccdc-framework.png"
-                      alt="The FAMTRIX CCDC Approach Diagram"
+                      alt="The FAMTRIX CCDC Framework: Creating Value, Creating Quality, Delivering Value with Quality, and Capturing Highlights"
+                      width={1672}
+                      height={941}
                       className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-102"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
@@ -915,58 +939,70 @@ export default function HomePage() {
               
               <div className="glass-card rounded-2xl p-5 space-y-4 group motion-reveal delay-100">
                 <div className="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/digital-marketing-service.png"
-                    alt="Case Study 1: Mysuru Retail Growth"
+                    alt="Mysuru Heritage Silk Store retail growth case study showing 310% lead increase"
+                    width={1536}
+                    height={1024}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/85 text-slate-300 border border-white/10 text-[10px] font-semibold uppercase tracking-wider">
+                    Proof of Concept
+                  </div>
                   <div className="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-950/80 text-emerald-400 font-mono text-xs font-bold">
-                    +310% Leads
+                    Goal: +310% Leads
                   </div>
                 </div>
                 <div>
                   <div className="text-xs font-mono text-brand-primary uppercase tracking-wider mb-1">E-Commerce & Retail</div>
                   <h4 className="text-lg font-bold text-white group-hover:text-brand-glow transition-colors">Mysuru Heritage Silk Store</h4>
-                  <p className="text-slate-400 text-xs mt-1">Transformed local offline retail store into an omnichannel e-commerce brand with automated WhatsApp checkout.</p>
+                  <p className="text-slate-400 text-xs mt-1">Conceptual blueprint transforming local offline retail into an omnichannel e-commerce presence with WhatsApp checkout integration.</p>
                 </div>
               </div>
 
               <div className="glass-card rounded-2xl p-5 space-y-4 group motion-reveal delay-200">
                 <div className="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/full-stack-dev-service.png"
-                    alt="Case Study 2: EdTech Platform"
+                    alt="EduMatrix EdTech platform case study serving over 12,000 active students"
+                    width={503}
+                    height={509}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/85 text-slate-300 border border-white/10 text-[10px] font-semibold uppercase tracking-wider">
+                    Proof of Concept
+                  </div>
                   <div className="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-950/80 text-cyan-400 font-mono text-xs font-bold">
-                    12,000+ Users
+                    Target: 10,000+ Users
                   </div>
                 </div>
                 <div>
                   <div className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-1">EdTech SaaS</div>
                   <h4 className="text-lg font-bold text-white group-hover:text-brand-glow transition-colors">EduMatrix Learning Platform</h4>
-                  <p className="text-slate-400 text-xs mt-1">Engineered a real-time test prep and student assessment portal with Next.js, Node.js, and AWS serverless backend.</p>
+                  <p className="text-slate-400 text-xs mt-1">Architecture prototype for a real-time test prep and student assessment portal with Next.js, Node.js, and serverless infrastructure.</p>
                 </div>
               </div>
 
               <div className="glass-card rounded-2xl p-5 space-y-4 group motion-reveal delay-300">
                 <div className="h-48 rounded-xl overflow-hidden bg-slate-900 relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/assets/ai-automation-service.png"
-                    alt="Case Study 3: Logistics Automation"
+                    alt="Karnataka Agri-Supply Chain logistics automation reducing manual processing by 85%"
+                    width={504}
+                    height={496}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/85 text-slate-300 border border-white/10 text-[10px] font-semibold uppercase tracking-wider">
+                    Proof of Concept
+                  </div>
                   <div className="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-950/80 text-purple-400 font-mono text-xs font-bold">
-                    -85% Manual Time
+                    Designed for: -85% Time
                   </div>
                 </div>
                 <div>
                   <div className="text-xs font-mono text-purple-400 uppercase tracking-wider mb-1">AI Automation</div>
                   <h4 className="text-lg font-bold text-white group-hover:text-brand-glow transition-colors">Karnataka Agri-Supply Chain</h4>
-                  <p className="text-slate-400 text-xs mt-1">Automated inventory sync and invoice processing with computer vision and WhatsApp notification pipelines.</p>
+                  <p className="text-slate-400 text-xs mt-1">Workflow automation framework designed for synchronized inventory tracking and automated notification pipelines.</p>
                 </div>
               </div>
 
@@ -1180,18 +1216,17 @@ export default function HomePage() {
               
               <div className="lg:col-span-5 relative group motion-reveal">
                 <div className="glass-card rounded-2xl p-2 relative shadow-2xl border border-white/10 overflow-hidden hover:border-emerald-500/40 transition-colors duration-500">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/assets/why-mysuru-based.png"
-                    alt="FAMTRIX Team in Mysuru"
-                    className="w-full h-80 sm:h-96 object-cover rounded-xl"
+                  <Image
+                    src="/assets/founder-afrid.jpg"
+                    alt="Afrid - Founder & Lead Developer at FAMTRIX"
+                    width={720}
+                    height={720}
+                    className="w-full h-80 sm:h-96 object-cover object-top rounded-xl"
                   />
                   <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10">
-                    <div className="text-sm font-bold text-white">The Engineering & Creative Collective</div>
-                    <div className="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
-                      <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>HQ: Mysuru, Karnataka, India</span>
-                    </div>
+                    <h3 className="text-base font-bold text-white">Afrid</h3>
+                    <p className="text-xs font-mono text-brand-secondary font-semibold">Founder & Lead Developer</p>
+                    <p className="text-xs text-slate-300 mt-1 leading-relaxed">Dedicated to building modern, accessible digital technology solutions that help Mysuru businesses scale and succeed.</p>
                   </div>
                 </div>
               </div>
@@ -1277,10 +1312,11 @@ export default function HomePage() {
               <article className="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between motion-reveal delay-100">
                 <div>
                   <div className="h-48 overflow-hidden bg-slate-900 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/digital-marketing-service.png"
-                      alt="Digital marketing tips for Mysuru businesses"
+                      alt="Digital marketing strategies and local SEO guide for Mysuru businesses"
+                      width={1536}
+                      height={1024}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 px-2 py-0.5 rounded text-[11px] font-mono bg-slate-950/80 text-emerald-400">
@@ -1312,10 +1348,11 @@ export default function HomePage() {
               <article className="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between motion-reveal delay-200">
                 <div>
                   <div className="h-48 overflow-hidden bg-slate-900 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/featured-product-showcase.png"
-                      alt="How to get your first 100 customers online"
+                      alt="Customer acquisition playbook: How to get your first 100 customers online"
+                      width={1672}
+                      height={941}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 px-2 py-0.5 rounded text-[11px] font-mono bg-slate-950/80 text-cyan-400">
@@ -1347,10 +1384,11 @@ export default function HomePage() {
               <article className="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between motion-reveal delay-300">
                 <div>
                   <div className="h-48 overflow-hidden bg-slate-900 relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src="/assets/full-stack-dev-service.png"
-                      alt="Modern Tech Stacks for 2026"
+                      alt="Choosing the right modern tech stack and Next.js for web applications in 2026"
+                      width={503}
+                      height={509}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 px-2 py-0.5 rounded text-[11px] font-mono bg-slate-950/80 text-purple-400">
@@ -1419,18 +1457,33 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="https://wa.me/918317477430?text=Hi%20FAMTRIX%20team%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                    href="tel:+918317477430"
+                    className="glass-card cta-hover-lift rounded-xl p-4 flex items-center gap-4 hover:border-cyan-500/50 group block"
+                  >
+                    <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition-colors">
+                      <PhoneCall className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-xs text-slate-400 font-medium">Direct Phone Call</div>
+                      <div className="text-base font-bold text-white font-mono group-hover:text-cyan-400 transition-colors">
+                        +91 8317477430
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://wa.me/918317477430"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="glass-card cta-hover-lift rounded-xl p-4 flex items-center gap-4 hover:border-emerald-500/50 group block"
                   >
                     <div className="p-3 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition-colors">
-                      <PhoneCall className="w-5 h-5" />
+                      <MessageCircle className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-400 font-medium">Phone / WhatsApp (Click to Chat)</div>
-                      <div className="text-base font-bold text-white font-mono group-hover:text-emerald-400 transition-colors">
-                        8317477430
+                      <div className="text-xs text-slate-400 font-medium">WhatsApp Support</div>
+                      <div className="text-base font-bold text-emerald-400 font-mono group-hover:underline">
+                        Chat on WhatsApp
                       </div>
                     </div>
                   </a>
@@ -1542,7 +1595,7 @@ export default function HomePage() {
                         <option value="ai-automation">AI & Workflow Automation</option>
                         <option value="cybersecurity">Cybersecurity Audit & Protection</option>
                         <option value="graphic-design">Graphic Design & Brand Kit</option>
-                        <option value="student-training">Student Training / Internship</option>
+                        <option value="student-training">Student Training / Project-Based Learning</option>
                         <option value="other">Other Inquiry / Consultation</option>
                       </select>
                     </div>
@@ -1606,8 +1659,13 @@ export default function HomePage() {
             
             <div className="lg:col-span-2 space-y-4">
               <a href="#" className="inline-block" aria-label="FAMTRIX Home">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/assets/famtrix-logo.png" alt="FAMTRIX Techno Solutions Logo" className="h-10 sm:h-12 w-auto object-contain" />
+                <Image
+                  src="/assets/famtrix-logo.png"
+                  alt="FAMTRIX Techno Solutions logo"
+                  width={694}
+                  height={211}
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
               </a>
               <p className="text-slate-300 text-sm max-w-sm">
                 Powered by Innovation. Driven by Technology.
@@ -1618,7 +1676,8 @@ export default function HomePage() {
               
               <div className="pt-2 text-xs space-y-1.5 font-mono">
                 <div>Email: <a href="mailto:contact@famtrix.in" className="text-slate-200 hover:text-brand-glow">contact@famtrix.in</a></div>
-                <div>Phone / WhatsApp: <a href="https://wa.me/918317477430" className="text-emerald-400 hover:underline">8317477430</a></div>
+                <div>Phone: <a href="tel:+918317477430" className="text-slate-200 hover:text-brand-glow">+91 8317477430</a></div>
+                <div>WhatsApp: <a href="https://wa.me/918317477430" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">Chat on WhatsApp</a></div>
                 <div>Location: Mysuru, Karnataka, India</div>
               </div>
             </div>
@@ -1648,7 +1707,7 @@ export default function HomePage() {
               <h4 className="text-xs font-bold uppercase tracking-wider text-white">Connect</h4>
               <ul className="space-y-2 text-xs">
                 <li>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1.5">
+                  <a href="https://www.linkedin.com/in/famtrix" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1.5">
                     <Linkedin className="w-3.5 h-3.5 text-blue-400" />
                     <span>LinkedIn</span>
                   </a>

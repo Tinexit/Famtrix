@@ -14,13 +14,205 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
+const siteUrl = 'https://www.famtrix.in';
+const siteTitle = 'FAMTRIX - Digital Marketing Software & Tech Solutions in Mysuru';
+const siteDescription =
+  'FAMTRIX provides digital marketing software, AI automation, and full-stack web development for startups and local businesses in Mysuru. Powered by Innovation.';
+
 export const metadata: Metadata = {
-  title: 'FAMTRIX | Digital Marketing & Tech Solutions in Mysuru',
-  description:
-    'Powered by Innovation. Driven by Technology. FAMTRIX delivers digital marketing, full-stack web development, AI automation, and cybersecurity in Mysuru.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: '%s | FAMTRIX',
+  },
+  description: siteDescription,
+  keywords: [
+    'Digital marketing software',
+    'AI automation',
+    'Full-stack development',
+    'Cybersecurity',
+    'Mysuru tech agency',
+    'Mysore software company',
+    'Startup MVP development',
+    'Web development Mysuru',
+    'FAMTRIX',
+  ],
+  authors: [{ name: 'FAMTRIX', url: siteUrl }],
+  creator: 'FAMTRIX',
+  publisher: 'FAMTRIX',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: 'FAMTRIX',
+    images: [
+      {
+        url: `${siteUrl}/assets/hero-banner.png`,
+        width: 1536,
+        height: 1024,
+        alt: 'FAMTRIX - Digital Marketing Software & Tech Solutions in Mysuru',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: [`${siteUrl}/assets/hero-banner.png`],
+    creator: '@famtrix',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/assets/famtrix-logo.png',
+    apple: '/assets/famtrix-logo.png',
   },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'FAMTRIX',
+      url: siteUrl,
+      logo: `${siteUrl}/assets/famtrix-logo.png`,
+      email: 'contact@famtrix.in',
+      telephone: '+91-8317477430',
+      description: 'Technology solutions and digital services.',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Mysuru',
+        addressRegion: 'Karnataka',
+        addressCountry: 'IN',
+      },
+      sameAs: [
+        'https://wa.me/918317477430',
+        'https://www.linkedin.com/in/famtrix',
+      ],
+    },
+    {
+      '@type': ['LocalBusiness', 'ProfessionalService'],
+      '@id': `${siteUrl}/#localbusiness`,
+      name: 'FAMTRIX',
+      url: siteUrl,
+      telephone: '+91-8317477430',
+      email: 'contact@famtrix.in',
+      image: `${siteUrl}/assets/hero-banner.png`,
+      logo: `${siteUrl}/assets/famtrix-logo.png`,
+      priceRange: '$$',
+      description:
+        'FAMTRIX provides digital marketing software, AI automation, and full-stack web development for startups and local businesses in Mysuru. Powered by Innovation.',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Mysuru',
+        addressLocality: 'Mysuru',
+        addressRegion: 'Karnataka',
+        postalCode: '570001',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 12.2958,
+        longitude: 76.6394,
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+          ],
+          opens: '09:00',
+          closes: '19:00',
+        },
+      ],
+    },
+    {
+      '@type': 'Service',
+      '@id': `${siteUrl}/#service-digital-marketing`,
+      name: 'Digital Marketing Software',
+      serviceType: 'Digital Marketing & Growth',
+      provider: {
+        '@id': `${siteUrl}/#localbusiness`,
+      },
+      description:
+        'Flagship growth suite. Multi-channel campaign manager, automated SEO insights, and lead tracking built for local reach and ROI.',
+      areaServed: {
+        '@type': 'City',
+        name: 'Mysuru',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${siteUrl}/#service-ai-automation`,
+      name: 'AI & Automation',
+      serviceType: 'Artificial Intelligence & Workflow Automation',
+      provider: {
+        '@id': `${siteUrl}/#localbusiness`,
+      },
+      description:
+        'Intelligent workflow automation, AI agents, CRM sync, and operational efficiency tools tailored for modern businesses.',
+      areaServed: {
+        '@type': 'City',
+        name: 'Mysuru',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${siteUrl}/#service-fullstack`,
+      name: 'Full-Stack Development',
+      serviceType: 'Web & Software Engineering',
+      provider: {
+        '@id': `${siteUrl}/#localbusiness`,
+      },
+      description:
+        'Custom web applications, MVP development, scalable SaaS architectures, and cloud microservices built with Next.js.',
+      areaServed: {
+        '@type': 'City',
+        name: 'Mysuru',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${siteUrl}/#service-cybersecurity`,
+      name: 'Cybersecurity',
+      serviceType: 'Information Security & Audits',
+      provider: {
+        '@id': `${siteUrl}/#localbusiness`,
+      },
+      description:
+        'Vulnerability assessments, code security audits, penetration testing, and hardened infrastructure protection.',
+      areaServed: {
+        '@type': 'City',
+        name: 'Mysuru',
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -30,6 +222,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${mono.variable} scroll-smooth dark`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-surface-canvas text-slate-100 antialiased selection:bg-brand-primary selection:text-white">
         {children}
       </body>
